@@ -1,0 +1,36 @@
+##########################################################################################################################
+# Frite -> Volume fictif pour recupérer des informations sur le passage des particules 
+# Volumes placés avant et après un élément interessant ex: système tungstène
+# WARNING : Frite Space associé à une géométrie !!!
+##########################################################################################################################
+
+
+/gate/world/daughters/name frite_colli_after
+/gate/world/daughters/insert box
+/gate/frite_colli_after/setMaterial G4_AIR
+/gate/frite_colli_after/geometry/setXLength 40 cm
+/gate/frite_colli_after/geometry/setYLength 40 cm
+/gate/frite_colli_after/geometry/setZLength 0.01 cm
+/gate/frite_colli_after/placement/setTranslation 0. 0. 165.005 cm
+/gate/frite_colli_after/vis/setColor magenta
+/gate/frite_colli_after/vis/forceSolid
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

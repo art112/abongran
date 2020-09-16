@@ -1,0 +1,81 @@
+
+# 26/02/2020 : lIGNE Arronax
+# Bride + Kapton 
+# Disposition Tungsten : 1 Feuille de tungsten enchassé dans du PVC
+# Détecteur Charbel
+# Cuivre Rayons X
+# Collimateur
+
+#====================================================================
+#====================================================================
+# -----------------------------------------------------
+# Bride + fenetre kapton
+#================================================
+/gate/world/daughters/name   BeamPipe
+/gate/world/daughters/insert        cylinder
+/gate/BeamPipe/setMaterial  G4_STAINLESS-STEEL
+/gate/BeamPipe/geometry/setRmin          0. cm
+/gate/BeamPipe/geometry/setRmax          3.0 cm
+/gate/BeamPipe/geometry/setHeight         10.0 cm
+/gate/BeamPipe/geometry/setPhiStart        0 deg
+/gate/BeamPipe/geometry/setDeltaPhi      360 deg
+/gate/BeamPipe/placement/setTranslation 0. 0. -5.0 cm
+/gate/BeamPipe/vis/setColor grey
+/gate/BeamPipe/vis/forceSolid true
+
+/gate/BeamPipe/daughters/name   Inside_BeamPipe
+/gate/BeamPipe/daughters/insert        cylinder
+/gate/Inside_BeamPipe/setMaterial                Vacuum
+/gate/Inside_BeamPipe/geometry/setRmin          0.0 cm
+/gate/Inside_BeamPipe/geometry/setRmax          1.5 cm
+/gate/Inside_BeamPipe/geometry/setHeight         10.0 cm
+/gate/Inside_BeamPipe/geometry/setPhiStart        0 deg
+/gate/Inside_BeamPipe/geometry/setDeltaPhi      360 deg
+/gate/Inside_BeamPipe/placement/setTranslation 0. 0. 0 cm
+/gate/Inside_BeamPipe/vis/setColor white
+/gate/Inside_BeamPipe/vis/forceSolid true
+
+#/gate/world/daughters/name   BeamPipe2
+#/gate/world/daughters/insert        cylinder
+#/gate/BeamPipe2/setMaterial  G4_STAINLESS-STEEL
+#/gate/BeamPipe2/geometry/setRmin          1.5 cm
+#/gate/BeamPipe2/geometry/setRmax          3.0 cm
+#/gate/BeamPipe2/geometry/setHeight         1.0 cm
+#/gate/BeamPipe2/geometry/setPhiStart        0 deg
+#/gate/BeamPipe2/geometry/setDeltaPhi      360 deg
+#/gate/BeamPipe2/placement/setTranslation 0. 0. 0.5 cm
+#/gate/BeamPipe2/vis/setColor grey
+#/gate/BeamPipe2/vis/forceSolid true
+#/gate/kapton/vis/forceWireframe
+
+#KAPTON - collé a la source = fenêtre de sortie
+#================================================
+
+/gate/world/daughters/name   kapton
+/gate/world/daughters/insert        cylinder
+/gate/kapton/setMaterial                G4_KAPTON
+/gate/kapton/geometry/setRmin          0.0 cm
+/gate/kapton/geometry/setRmax          1.5 cm
+/gate/kapton/geometry/setHeight         0.050 mm
+/gate/kapton/geometry/setPhiStart        0 deg
+/gate/kapton/geometry/setDeltaPhi      360 deg
+/gate/kapton/placement/setTranslation 0. 0. 0.025 mm
+/gate/kapton/vis/setColor yellow
+/gate/kapton/vis/forceSolid true
+
+
+
+#2 micron de cuivre avant le colli pour monitorer les RX - 1cm avant le colli 
+#=============================================================================
+# Charbel 26/02/2020 : Placement et utilisation non décidée
+
+/gate/world/daughters/name Cuivre
+/gate/world/daughters/insert box
+/gate/Cuivre/setMaterial G4_AIR
+/gate/Cuivre/geometry/setXLength 20. cm
+/gate/Cuivre/geometry/setYLength 20. cm
+/gate/Cuivre/geometry/setZLength 0.002 mm
+/gate/Cuivre/vis/setColor red
+#/gate/Cuivre/vis/forceWireframe
+/gate/Cuivre/vis/forceSolid true
+/gate/Cuivre/placement/setTranslation 0. 0. 50 mm

@@ -1,0 +1,16 @@
+#====================================================================
+#====================================================================
+# -----------------------------------------------------
+# Bride + fenetre kapton
+#================================================
+/gate/world/daughters/name   BeamPipe
+/gate/world/daughters/insert        cylinder
+/gate/BeamPipe/setMaterial  G4_STAINLESS-STEEL
+/gate/BeamPipe/geometry/setRmin          1.5 cm
+/gate/BeamPipe/geometry/setRmax          3.0 cm
+/gate/BeamPipe/geometry/setHeight         10.0 cm
+/gate/BeamPipe/geometry/setPhiStart        0 deg
+/gate/BeamPipe/geometry/setDeltaPhi      360 deg
+/gate/BeamPipe/placement/setTranslation 0. 0. -5.0 cm
+/gate/BeamPipe/vis/setColor grey
+/gate/BeamPipe/vis/forceSolid true

@@ -1,0 +1,260 @@
+
+# 26/02/2020 : lIGNE Arronax
+# Bride + Kapton 
+# Collimator 1
+# Light Detector
+# Ionizationchamber Rayons X Ionisation Chamber ?
+# Collimateur 2
+# Zebrafish Embryo
+
+## echo "CoefMultiplicateur 1.05000000000000000000"
+
+#====================================================================
+#====================================================================
+# -----------------------------------------------------
+# Bride + fenetre kapton
+#================================================
+/gate/world/daughters/name   BeamPipe
+/gate/world/daughters/insert        cylinder
+/gate/BeamPipe/setMaterial  G4_STAINLESS-STEEL
+/gate/BeamPipe/geometry/setRmin          0. cm
+/gate/BeamPipe/geometry/setRmax          3.0 cm
+/gate/BeamPipe/geometry/setHeight         10.0 cm
+/gate/BeamPipe/geometry/setPhiStart        0 deg
+/gate/BeamPipe/geometry/setDeltaPhi      360 deg
+/gate/BeamPipe/placement/setTranslation 0. 0. -5.0 cm
+/gate/BeamPipe/vis/setColor grey
+/gate/BeamPipe/vis/forceSolid true
+
+/gate/BeamPipe/daughters/name   Inside_BeamPipe
+/gate/BeamPipe/daughters/insert        cylinder
+/gate/Inside_BeamPipe/setMaterial                Vacuum
+/gate/Inside_BeamPipe/geometry/setRmin          0.0 cm
+/gate/Inside_BeamPipe/geometry/setRmax          1.5 cm
+/gate/Inside_BeamPipe/geometry/setHeight         10.0 cm
+/gate/Inside_BeamPipe/geometry/setPhiStart        0 deg
+/gate/Inside_BeamPipe/geometry/setDeltaPhi      360 deg
+/gate/Inside_BeamPipe/placement/setTranslation 0. 0. 0 cm
+/gate/Inside_BeamPipe/vis/setColor white
+/gate/Inside_BeamPipe/vis/forceSolid true
+
+#/gate/world/daughters/name   BeamPipe2
+#/gate/world/daughters/insert        cylinder
+#/gate/BeamPipe2/setMaterial  G4_STAINLESS-STEEL
+#/gate/BeamPipe2/geometry/setRmin          1.5 cm
+#/gate/BeamPipe2/geometry/setRmax          3.0 cm
+#/gate/BeamPipe2/geometry/setHeight         1.0 cm
+#/gate/BeamPipe2/geometry/setPhiStart        0 deg
+#/gate/BeamPipe2/geometry/setDeltaPhi      360 deg
+#/gate/BeamPipe2/placement/setTranslation 0. 0. 0.5 cm
+#/gate/BeamPipe2/vis/setColor grey
+#/gate/BeamPipe2/vis/forceSolid true
+#/gate/kapton/vis/forceWireframe
+
+#KAPTON - collé a la source = fenêtre de sortie
+#================================================
+
+/gate/world/daughters/name   kapton
+/gate/world/daughters/insert        cylinder
+/gate/kapton/setMaterial                G4_KAPTON
+/gate/kapton/geometry/setRmin          0.0 cm
+/gate/kapton/geometry/setRmax          1.5 cm
+/gate/kapton/geometry/setHeight         0.052500000 mm
+/gate/kapton/geometry/setPhiStart        0 deg
+/gate/kapton/geometry/setDeltaPhi      360 deg
+/gate/kapton/placement/setTranslation 0. 0. 0.026250000 mm
+/gate/kapton/vis/setColor yellow
+/gate/kapton/vis/forceSolid true
+
+# -----------------------------------------------------
+#====================================================================
+#====================================================================
+
+
+#COLLIMATEUR 1 collé à la cible
+#=============================================================================================================
+
+/gate/world/daughters/name colli1
+/gate/world/daughters/insert cylinder
+/gate/colli1/setMaterial G4_Al
+/gate/colli1/geometry/setRmin 0 cm
+/gate/colli1/geometry/setRmax 10 cm
+/gate/colli1/geometry/setHeight 25 mm
+/gate/colli1/vis/setColor grey
+/gate/colli1/vis/forceSolid true
+/gate/colli1/placement/setTranslation 0. 0. 752.5 mm
+
+
+#TROU colli1
+
+/gate/colli1/daughters/name trou1
+/gate/colli1/daughters/insert cylinder
+/gate/trou1/setMaterial G4_AIR
+/gate/trou1/geometry/setRmin 0. mm
+/gate/trou1/geometry/setRmax 7.5 mm
+/gate/trou1/geometry/setHeight 25 mm
+/gate/trou1/vis/setColor white
+/gate/trou1/vis/forceSolid true
+
+
+/gate/world/daughters/name frite_colli_before
+/gate/world/daughters/insert box
+/gate/frite_colli_before/setMaterial G4_AIR
+/gate/frite_colli_before/geometry/setXLength 20 cm
+/gate/frite_colli_before/geometry/setYLength 20 cm
+/gate/frite_colli_before/geometry/setZLength 0.01 mm
+/gate/frite_colli_before/placement/setTranslation 0. 0. 739.90000000000000000000 mm
+/gate/frite_colli_before/vis/setColor magenta
+/gate/frite_colli_before/vis/forceSolid
+
+/gate/world/daughters/name frite_colli_after
+/gate/world/daughters/insert box
+/gate/frite_colli_after/setMaterial G4_AIR
+/gate/frite_colli_after/geometry/setXLength 20 cm
+/gate/frite_colli_after/geometry/setYLength 20 cm
+/gate/frite_colli_after/geometry/setZLength 0.01 mm
+/gate/frite_colli_after/placement/setTranslation 0. 0. 766.00000000000000000000 mm
+/gate/frite_colli_after/vis/setColor magenta
+/gate/frite_colli_after/vis/forceSolid
+
+
+
+#TUNGSTENE + Support - pour éclater - homogénéiser - le faisceau - a 1cm du Kapton
+#========================================================
+# décalage de +0.01 mm pour placer le Phasespace
+# // Charbel 26/02/2020 : incertitude sur le placement +- 1 mm
+
+# /gate/world/daughters/name tungsten_support
+# /gate/world/daughters/insert box
+# /gate/tungsten_support/setMaterial G4_AIR
+# /gate/tungsten_support/geometry/setXLength 6. cm
+# /gate/tungsten_support/geometry/setYLength 6. cm
+# /gate/tungsten_support/geometry/setZLength 4 mm
+# /gate/tungsten_support/vis/setColor white
+# /gate/tungsten_support/vis/forceWireframe
+# #/gate/tungsten_support/vis/forceSolid
+# /gate/tungsten_support/placement/setTranslation 0. 0. 12.01 mm
+# 
+# /gate/tungsten_support/daughters/name tungsten
+# /gate/tungsten_support/daughters/insert box
+# /gate/tungsten/setMaterial G4_W
+# /gate/tungsten/geometry/setXLength 25 mm
+# /gate/tungsten/geometry/setYLength 25 mm
+# /gate/tungsten/geometry/setZLength  mm
+# /gate/tungsten/vis/setColor red
+# #/gate/tungsten/vis/forceWireframe
+# /gate/tungsten/vis/forceSolid
+# /gate/tungsten/placement/setTranslation 0. 0. 0. mm
+
+
+
+#Detecteur Dose Charbel - contient deux ouvertures en alu
+#=============================================================================================================
+
+#Aluminium - 2 couches de 25 micron espacé de 35mm en entrée et sortie du système PM 
+
+/gate/world/daughters/name Lightdetector
+/gate/world/daughters/insert box
+/gate/Lightdetector/setMaterial G4_AIR
+/gate/Lightdetector/geometry/setXLength 6. cm
+/gate/Lightdetector/geometry/setYLength 6. cm
+/gate/Lightdetector/geometry/setZLength 35.05250000000000000000 mm
+/gate/Lightdetector/vis/setColor white
+/gate/Lightdetector/vis/forceWireframe
+#/gate/Lightdetector/vis/forceSolid
+/gate/Lightdetector/placement/setTranslation 0. 0. 1300.025 mm
+
+
+#Aluminium - 2 couches de 20 micron espacé de 5cm en entrée et sortie du système PM  - 1cm après le tungsten
+/gate/Lightdetector/daughters/name Alu_in
+/gate/Lightdetector/daughters/insert box
+/gate/Alu_in/setMaterial G4_Al
+/gate/Alu_in/geometry/setXLength 6. cm
+/gate/Alu_in/geometry/setYLength 6. cm
+/gate/Alu_in/geometry/setZLength .02625000000000000000 mm
+/gate/Alu_in/vis/setColor gray
+#/gate/Alu_in/vis/forceWireframe
+/gate/Alu_in/vis/forceSolid
+/gate/Alu_in/placement/setTranslation 0. 0. -17.51312500000000000000 mm
+
+/gate/Lightdetector/daughters/name Alu_out
+/gate/Lightdetector/daughters/insert box
+/gate/Alu_out/setMaterial G4_Al
+/gate/Alu_out/geometry/setXLength 6. cm
+/gate/Alu_out/geometry/setYLength 6. cm
+/gate/Alu_out/geometry/setZLength .02625000000000000000 mm
+/gate/Alu_out/vis/setColor gray
+#/gate/Alu_out/vis/forceWireframe
+/gate/Alu_out/vis/forceSolid
+/gate/Alu_out/placement/setTranslation 0. 0. 17.51312500000000000000 mm
+
+
+
+#2 micron de cuivre avant le colli pour monitorer les RX - 1cm avant le colli 
+#=============================================================================
+# Charbel 26/02/2020 : Placement et utilisation non décidée
+
+
+/gate/world/daughters/name Ionizationchamber
+/gate/world/daughters/insert box
+/gate/Ionizationchamber/setMaterial G4_Cu
+/gate/Ionizationchamber/geometry/setXLength 20. cm
+/gate/Ionizationchamber/geometry/setYLength 20. cm
+/gate/Ionizationchamber/geometry/setZLength .00210000000000000000 mm
+/gate/Ionizationchamber/vis/setColor red
+#/gate/Ionizationchamber/vis/forceWireframe
+/gate/Ionizationchamber/vis/forceSolid true
+/gate/Ionizationchamber/placement/setTranslation 0. 0. 1345.525 mm
+
+
+
+
+#COLLIMATEUR 2 collé à la cible
+#=============================================================================================================
+
+
+/gate/world/daughters/name colli2
+/gate/world/daughters/insert cylinder
+/gate/colli2/setMaterial G4_Al
+/gate/colli2/geometry/setRmin 0. cm
+/gate/colli2/geometry/setRmax 10 cm
+/gate/colli2/geometry/setHeight 25 mm
+/gate/colli2/vis/setColor grey
+/gate/colli2/vis/forceSolid true
+/gate/colli2/placement/setTranslation 0. 0. 1403.525 mm
+
+
+#TROU colli2
+
+/gate/colli2/daughters/name trou2
+/gate/colli2/daughters/insert cylinder
+/gate/trou2/setMaterial G4_AIR
+/gate/trou2/geometry/setRmin 0. mm
+/gate/trou2/geometry/setRmax 3.5 mm
+/gate/trou2/geometry/setHeight 25 mm
+/gate/trou2/vis/setColor white
+/gate/trou2/vis/forceSolid true
+
+
+/gate/world/daughters/name frite_colli2_before
+/gate/world/daughters/insert box
+/gate/frite_colli2_before/setMaterial G4_AIR
+/gate/frite_colli2_before/geometry/setXLength 40 cm
+/gate/frite_colli2_before/geometry/setYLength 40 cm
+/gate/frite_colli2_before/geometry/setZLength 0.01 cm
+/gate/frite_colli2_before/placement/setTranslation 0. 0. 1390.92500000000000000000 mm
+/gate/frite_colli2_before/vis/setColor magenta
+/gate/frite_colli2_before/vis/forceSolid
+
+/gate/world/daughters/name frite_colli2_after
+/gate/world/daughters/insert box
+/gate/frite_colli2_after/setMaterial G4_AIR
+/gate/frite_colli2_after/geometry/setXLength 40 cm
+/gate/frite_colli2_after/geometry/setYLength 40 cm
+/gate/frite_colli2_after/geometry/setZLength 0.01 cm
+/gate/frite_colli2_after/placement/setTranslation 0. 0. 1417.02500000000000000000 mm
+/gate/frite_colli2_after/vis/setColor magenta
+/gate/frite_colli2_after/vis/forceSolid
+
+
+

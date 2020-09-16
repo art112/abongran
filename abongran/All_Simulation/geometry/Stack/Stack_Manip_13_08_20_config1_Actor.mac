@@ -1,0 +1,70 @@
+##############################################################################################################################################
+# Stack_Manip_13_08_20 Actor
+##############################################################################################################################################
+    
+    ##############################################################################################################################################
+    # Stack_1 Stack_1_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor Stack_1_Actor
+    /gate/actor/Stack_1_Actor/save output/Stack_1_Actor.root
+    /gate/actor/Stack_1_Actor/attachTo Stack_1
+    /gate/actor/Stack_1_Actor/setSize 15 15 54.350 mm
+    /gate/actor/Stack_1_Actor/setResolution 1 1 5435
+    /gate/actor/Stack_1_Actor/saveEveryNSeconds 60
+    /gate/actor/Stack_1_Actor/stepHitType random
+    /gate/actor/Stack_1_Actor/enableEdep true
+    /gate/actor/Stack_1_Actor/enableUncertaintyEdep true
+    /gate/actor/Stack_1_Actor/enableSquaredEdep true
+    /gate/actor/Stack_1_Actor/enableDose true
+    /gate/actor/Stack_1_Actor/enableUncertaintyDose true
+    /gate/actor/Stack_1_Actor/enableSquaredDose true
+    /gate/actor/Stack_1_Actor/enableDoseToWater true
+    /gate/actor/Stack_1_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/Stack_1_Actor/enableSquaredEdep true
+    /gate/actor/Stack_1_Actor/enableNumberOfHits true
+  
+    ##############################################################################################################################################
+    # Stack_1 Stack_1_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor Stack_B_1_Actor
+    /gate/actor/Stack_B_1_Actor/save output/Stack_B_1_Actor.root
+    /gate/actor/Stack_B_1_Actor/attachTo B_1
+    /gate/actor/Stack_B_1_Actor/setSize 15 15 0.05 mm
+    /gate/actor/Stack_B_1_Actor/setResolution 1 1 5
+    /gate/actor/Stack_B_1_Actor/saveEveryNSeconds 60
+    /gate/actor/Stack_B_1_Actor/stepHitType random
+    /gate/actor/Stack_B_1_Actor/enableEdep true
+    /gate/actor/Stack_B_1_Actor/enableUncertaintyEdep true
+    /gate/actor/Stack_B_1_Actor/enableSquaredEdep true
+    /gate/actor/Stack_B_1_Actor/enableDose true
+    /gate/actor/Stack_B_1_Actor/enableUncertaintyDose true
+    /gate/actor/Stack_B_1_Actor/enableSquaredDose true
+    /gate/actor/Stack_B_1_Actor/enableDoseToWater true
+    /gate/actor/Stack_B_1_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/Stack_B_1_Actor/enableSquaredEdep true
+    /gate/actor/Stack_B_1_Actor/enableNumberOfHits true
+    
+    
+    ##############################################################################################################################################
+    # Stack_B_4 Stack_B_4_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor Stack_B_4
+    /gate/actor/Stack_B_4/save output/Stack_B_4_Actor.root
+    /gate/actor/Stack_B_4/attachTo B_4
+    /gate/actor/Stack_B_4/setSize 15 15 50 mm
+    /gate/actor/Stack_B_4/setResolution 1 1 500
+    /gate/actor/Stack_B_4/saveEveryNSeconds 60
+    /gate/actor/Stack_B_4/stepHitType random
+    /gate/actor/Stack_B_4/enableEdep true
+    /gate/actor/Stack_B_4/enableUncertaintyEdep true
+    /gate/actor/Stack_B_4/enableSquaredEdep true
+    /gate/actor/Stack_B_4/enableDose true
+    /gate/actor/Stack_B_4/enableUncertaintyDose true
+    /gate/actor/Stack_B_4/enableSquaredDose true
+    /gate/actor/Stack_B_4/enableDoseToWater true
+    /gate/actor/Stack_B_4/enableUncertaintyDoseToWater true
+    /gate/actor/Stack_B_4/enableSquaredEdep true
+    /gate/actor/Stack_B_4/enableNumberOfHits true

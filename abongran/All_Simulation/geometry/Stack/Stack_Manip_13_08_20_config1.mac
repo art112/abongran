@@ -1,0 +1,89 @@
+##############################################################################################################################################
+# Stack_Manip_13_08_20
+##############################################################################################################################################
+    
+    ##############################################################################################################################################
+    # Stack_1
+    ##############################################################################################################################################
+    
+    /gate/world/daughters/name Stack_1
+    /gate/world/daughters/insert box
+    ### 
+    /gate/Stack_1/setMaterial  G4_AIR
+    /gate/Stack_1/geometry/setXLength 10 cm
+    /gate/Stack_1/geometry/setYLength 10 cm
+    /gate/Stack_1/geometry/setZLength 54.350 mm
+    /gate/Stack_1/vis/setColor white
+    /gate/Stack_1/vis/forceWireframe
+    #/gate/Stack_1/vis/forceSolid
+    #/gate/Stack_1/placement/setTranslation 0. 0. 206.4675 cm
+    /gate/Stack_1/placement/setTranslation 0. 0. VPLACEMENTSTACK mm
+  
+    
+    ##############################################################################################################################################
+    # B_1
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name B_1
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/B_1/setMaterial  G4_Ag
+    /gate/B_1/geometry/setXLength 10 cm
+    /gate/B_1/geometry/setYLength 10 cm
+    /gate/B_1/geometry/setZLength 0.05 mm
+    /gate/B_1/vis/setColor white
+    #/gate/B_1/vis/forceWireframe
+    /gate/B_1/vis/forceSolid
+    /gate/B_1/placement/setTranslation 0. 0. -27.15000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # B_2
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name B_2
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/B_2/setMaterial  G4_WATER
+    /gate/B_2/geometry/setXLength 10 cm
+    /gate/B_2/geometry/setYLength 10 cm
+    /gate/B_2/geometry/setZLength 1.3 mm
+    /gate/B_2/vis/setColor white
+    #/gate/B_2/vis/forceWireframe
+    /gate/B_2/vis/forceSolid
+    /gate/B_2/placement/setTranslation 0. 0. -26.47500000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # B_3
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name B_3
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/B_3/setMaterial  G4_WATER
+    /gate/B_3/geometry/setXLength 10 cm
+    /gate/B_3/geometry/setYLength 10 cm
+    /gate/B_3/geometry/setZLength 3 mm
+    /gate/B_3/vis/setColor white
+    #/gate/B_3/vis/forceWireframe
+    /gate/B_3/vis/forceSolid
+    /gate/B_3/placement/setTranslation 0. 0. -24.32500000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # B_4
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name B_4
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/B_4/setMaterial  G4_WATER
+    /gate/B_4/geometry/setXLength 10 cm
+    /gate/B_4/geometry/setYLength 10 cm
+    /gate/B_4/geometry/setZLength 50 mm
+    /gate/B_4/vis/setColor white
+    #/gate/B_4/vis/forceWireframe
+    /gate/B_4/vis/forceSolid
+    /gate/B_4/placement/setTranslation 0. 0. 2.17500000000000000000 mm
+  

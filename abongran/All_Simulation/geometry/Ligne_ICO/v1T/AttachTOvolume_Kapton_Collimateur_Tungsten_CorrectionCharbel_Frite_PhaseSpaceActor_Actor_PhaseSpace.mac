@@ -1,0 +1,18 @@
+#Phase space actor
+
+#Phase space actor
+/gate/actor/addActor PhaseSpaceActor              frite_colli_after_phasespaceactor
+/gate/actor/frite_colli_after_phasespaceactor/save                     output/frite_colli_after_phasespaceactor.IAEAphsp
+/gate/actor/frite_colli_after_phasespaceactor/attachTo                 frite_colli_after
+/gate/actor/frite_colli_after_phasespaceactor/enableProductionProcess  true
+#/gate/actor/frite_colli_after_phasespaceactor/enableDirection          true
+/gate/actor/frite_colli_after_phasespaceactor/enableXPosition          true
+/gate/actor/frite_colli_after_phasespaceactor/enableYPosition          true
+/gate/actor/frite_colli_after_phasespaceactor/enableZPosition          true
+/gate/actor/frite_colli_after_phasespaceactor/enableXDirection         true
+/gate/actor/frite_colli_after_phasespaceactor/enableYDirection         true
+/gate/actor/frite_colli_after_phasespaceactor/enableZDirection         true
+/gate/actor/frite_colli_after_phasespaceactor/addFilter                       particleFilter
+/gate/actor/frite_colli_after_phasespaceactor/particleFilter/addParticle      proton
+
+

@@ -1,0 +1,361 @@
+##############################################################################################################################################
+# Stack_ManipZebra_28_05_20_v2
+##############################################################################################################################################
+    
+    ##############################################################################################################################################
+    # Stack_1
+    ##############################################################################################################################################
+    
+    /gate/world/daughters/name Stack_1
+    /gate/world/daughters/insert box
+    ### 
+    /gate/Stack_1/setMaterial  G4_AIR
+    /gate/Stack_1/geometry/setXLength 30 cm
+    /gate/Stack_1/geometry/setYLength 30 cm
+    /gate/Stack_1/geometry/setZLength 38.000 mm
+    /gate/Stack_1/vis/setColor white
+    /gate/Stack_1/vis/forceWireframe
+    #/gate/Stack_1/vis/forceSolid
+    /gate/Stack_1/placement/setTranslation 0. 0. 1439.535 mm
+  
+
+    ##############################################################################################################################################
+    # F_1
+    ##############################################################################################################################################
+ 
+    /gate/Stack_1/daughters/name F_1
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/F_1/setMaterial Layer_EBT3
+    /gate/F_1/geometry/setXLength 6 cm
+    /gate/F_1/geometry/setYLength 6 cm
+    ### 125 * 2 + 28 um 
+    /gate/F_1/geometry/setZLength 0.278 mm
+    /gate/F_1/vis/setColor white
+    #/gate/F_1/vis/forceWireframe
+    /gate/F_1/vis/forceSolid
+    /gate/F_1/placement/setTranslation 0. 0. -18.86100000000000000000 mm
+  
+    /gate/F_1/daughters/name F_1_ActiveLayer
+    /gate/F_1/daughters/insert box
+    ### 
+    /gate/F_1_ActiveLayer/setMaterial Active_Layer_EBT3 
+    #EBT3_ActiveLayer
+    /gate/F_1_ActiveLayer/geometry/setXLength 6 cm
+    /gate/F_1_ActiveLayer/geometry/setYLength 6 cm
+    ###  
+    /gate/F_1_ActiveLayer/geometry/setZLength 0.028 mm
+    /gate/F_1_ActiveLayer/vis/setColor blue
+    #/gate/F_1_ActiveLayer/vis/forceWireframe
+    /gate/F_1_ActiveLayer/vis/forceSolid
+    /gate/F_1_ActiveLayer/placement/setTranslation 0. 0. 0. mm
+  
+    
+    ##############################################################################################################################################
+    # B_1
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name B_1
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/B_1/setMaterial  G4_PLEXIGLASS
+    /gate/B_1/geometry/setXLength 30 cm
+    /gate/B_1/geometry/setYLength 30 cm
+    /gate/B_1/geometry/setZLength 25 mm
+    /gate/B_1/vis/setColor white
+    #/gate/B_1/vis/forceWireframe
+    /gate/B_1/vis/forceSolid
+    /gate/B_1/placement/setTranslation 0. 0. -6.22200000000000000000 mm
+  
+
+    ##############################################################################################################################################
+    # F_2
+    ##############################################################################################################################################
+ 
+    /gate/Stack_1/daughters/name F_2
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/F_2/setMaterial Layer_EBT3
+    /gate/F_2/geometry/setXLength 6 cm
+    /gate/F_2/geometry/setYLength 6 cm
+    ### 125 * 2 + 28 um 
+    /gate/F_2/geometry/setZLength 0.278 mm
+    /gate/F_2/vis/setColor white
+    #/gate/F_2/vis/forceWireframe
+    /gate/F_2/vis/forceSolid
+    /gate/F_2/placement/setTranslation 0. 0. 6.41700000000000000000 mm
+  
+    /gate/F_2/daughters/name F_2_ActiveLayer
+    /gate/F_2/daughters/insert box
+    ### 
+    /gate/F_2_ActiveLayer/setMaterial Active_Layer_EBT3 
+    #EBT3_ActiveLayer
+    /gate/F_2_ActiveLayer/geometry/setXLength 6 cm
+    /gate/F_2_ActiveLayer/geometry/setYLength 6 cm
+    ###  
+    /gate/F_2_ActiveLayer/geometry/setZLength 0.028 mm
+    /gate/F_2_ActiveLayer/vis/setColor blue
+    #/gate/F_2_ActiveLayer/vis/forceWireframe
+    /gate/F_2_ActiveLayer/vis/forceSolid
+    /gate/F_2_ActiveLayer/placement/setTranslation 0. 0. 0. mm
+  
+    
+    ##############################################################################################################################################
+    # B_2
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name B_2
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/B_2/setMaterial  G4_PLEXIGLASS
+    /gate/B_2/geometry/setXLength 30 cm
+    /gate/B_2/geometry/setYLength 30 cm
+    /gate/B_2/geometry/setZLength 5 mm
+    /gate/B_2/vis/setColor white
+    #/gate/B_2/vis/forceWireframe
+    /gate/B_2/vis/forceSolid
+    /gate/B_2/placement/setTranslation 0. 0. 9.05600000000000000000 mm
+  
+
+    ##############################################################################################################################################
+    # F_3
+    ##############################################################################################################################################
+ 
+    /gate/Stack_1/daughters/name F_3
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/F_3/setMaterial Layer_EBT3
+    /gate/F_3/geometry/setXLength 6 cm
+    /gate/F_3/geometry/setYLength 6 cm
+    ### 125 * 2 + 28 um 
+    /gate/F_3/geometry/setZLength 0.278 mm
+    /gate/F_3/vis/setColor white
+    #/gate/F_3/vis/forceWireframe
+    /gate/F_3/vis/forceSolid
+    /gate/F_3/placement/setTranslation 0. 0. 11.69500000000000000000 mm
+  
+    /gate/F_3/daughters/name F_3_ActiveLayer
+    /gate/F_3/daughters/insert box
+    ### 
+    /gate/F_3_ActiveLayer/setMaterial Active_Layer_EBT3 
+    #EBT3_ActiveLayer
+    /gate/F_3_ActiveLayer/geometry/setXLength 6 cm
+    /gate/F_3_ActiveLayer/geometry/setYLength 6 cm
+    ###  
+    /gate/F_3_ActiveLayer/geometry/setZLength 0.028 mm
+    /gate/F_3_ActiveLayer/vis/setColor blue
+    #/gate/F_3_ActiveLayer/vis/forceWireframe
+    /gate/F_3_ActiveLayer/vis/forceSolid
+    /gate/F_3_ActiveLayer/placement/setTranslation 0. 0. 0. mm
+  
+    
+    ##############################################################################################################################################
+    # B_3
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name B_3
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/B_3/setMaterial  G4_PLEXIGLASS
+    /gate/B_3/geometry/setXLength 10 cm
+    /gate/B_3/geometry/setYLength 10 cm
+    /gate/B_3/geometry/setZLength 0.5 mm
+    /gate/B_3/vis/setColor white
+    #/gate/B_3/vis/forceWireframe
+    /gate/B_3/vis/forceSolid
+    /gate/B_3/placement/setTranslation 0. 0. 12.08400000000000000000 mm
+  
+
+    ##############################################################################################################################################
+    # F_4
+    ##############################################################################################################################################
+ 
+    /gate/Stack_1/daughters/name F_4
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/F_4/setMaterial Layer_EBT3
+    /gate/F_4/geometry/setXLength 6 cm
+    /gate/F_4/geometry/setYLength 6 cm
+    ### 125 * 2 + 28 um 
+    /gate/F_4/geometry/setZLength 0.278 mm
+    /gate/F_4/vis/setColor white
+    #/gate/F_4/vis/forceWireframe
+    /gate/F_4/vis/forceSolid
+    /gate/F_4/placement/setTranslation 0. 0. 12.47300000000000000000 mm
+  
+    /gate/F_4/daughters/name F_4_ActiveLayer
+    /gate/F_4/daughters/insert box
+    ### 
+    /gate/F_4_ActiveLayer/setMaterial Active_Layer_EBT3 
+    #EBT3_ActiveLayer
+    /gate/F_4_ActiveLayer/geometry/setXLength 6 cm
+    /gate/F_4_ActiveLayer/geometry/setYLength 6 cm
+    ###  
+    /gate/F_4_ActiveLayer/geometry/setZLength 0.028 mm
+    /gate/F_4_ActiveLayer/vis/setColor blue
+    #/gate/F_4_ActiveLayer/vis/forceWireframe
+    /gate/F_4_ActiveLayer/vis/forceSolid
+    /gate/F_4_ActiveLayer/placement/setTranslation 0. 0. 0. mm
+  
+    
+    ##############################################################################################################################################
+    # B_4
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name B_4
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/B_4/setMaterial  G4_PLEXIGLASS
+    /gate/B_4/geometry/setXLength 10 cm
+    /gate/B_4/geometry/setYLength 10 cm
+    /gate/B_4/geometry/setZLength 0.5 mm
+    /gate/B_4/vis/setColor white
+    #/gate/B_4/vis/forceWireframe
+    /gate/B_4/vis/forceSolid
+    /gate/B_4/placement/setTranslation 0. 0. 12.86200000000000000000 mm
+  
+
+    ##############################################################################################################################################
+    # F_5
+    ##############################################################################################################################################
+ 
+    /gate/Stack_1/daughters/name F_5
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/F_5/setMaterial Layer_EBT3
+    /gate/F_5/geometry/setXLength 6 cm
+    /gate/F_5/geometry/setYLength 6 cm
+    ### 125 * 2 + 28 um 
+    /gate/F_5/geometry/setZLength 0.278 mm
+    /gate/F_5/vis/setColor white
+    #/gate/F_5/vis/forceWireframe
+    /gate/F_5/vis/forceSolid
+    /gate/F_5/placement/setTranslation 0. 0. 13.25100000000000000000 mm
+  
+    /gate/F_5/daughters/name F_5_ActiveLayer
+    /gate/F_5/daughters/insert box
+    ### 
+    /gate/F_5_ActiveLayer/setMaterial Active_Layer_EBT3 
+    #EBT3_ActiveLayer
+    /gate/F_5_ActiveLayer/geometry/setXLength 6 cm
+    /gate/F_5_ActiveLayer/geometry/setYLength 6 cm
+    ###  
+    /gate/F_5_ActiveLayer/geometry/setZLength 0.028 mm
+    /gate/F_5_ActiveLayer/vis/setColor blue
+    #/gate/F_5_ActiveLayer/vis/forceWireframe
+    /gate/F_5_ActiveLayer/vis/forceSolid
+    /gate/F_5_ActiveLayer/placement/setTranslation 0. 0. 0. mm
+  
+
+    ##############################################################################################################################################
+    # F_6
+    ##############################################################################################################################################
+ 
+    /gate/Stack_1/daughters/name F_6
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/F_6/setMaterial Layer_EBT3
+    /gate/F_6/geometry/setXLength 6 cm
+    /gate/F_6/geometry/setYLength 6 cm
+    ### 125 * 2 + 28 um 
+    /gate/F_6/geometry/setZLength 0.278 mm
+    /gate/F_6/vis/setColor white
+    #/gate/F_6/vis/forceWireframe
+    /gate/F_6/vis/forceSolid
+    /gate/F_6/placement/setTranslation 0. 0. 13.52900000000000000000 mm
+  
+    /gate/F_6/daughters/name F_6_ActiveLayer
+    /gate/F_6/daughters/insert box
+    ### 
+    /gate/F_6_ActiveLayer/setMaterial Active_Layer_EBT3 
+    #EBT3_ActiveLayer
+    /gate/F_6_ActiveLayer/geometry/setXLength 6 cm
+    /gate/F_6_ActiveLayer/geometry/setYLength 6 cm
+    ###  
+    /gate/F_6_ActiveLayer/geometry/setZLength 0.028 mm
+    /gate/F_6_ActiveLayer/vis/setColor blue
+    #/gate/F_6_ActiveLayer/vis/forceWireframe
+    /gate/F_6_ActiveLayer/vis/forceSolid
+    /gate/F_6_ActiveLayer/placement/setTranslation 0. 0. 0. mm
+  
+
+    ##############################################################################################################################################
+    # F_7
+    ##############################################################################################################################################
+ 
+    /gate/Stack_1/daughters/name F_7
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/F_7/setMaterial Layer_EBT3
+    /gate/F_7/geometry/setXLength 6 cm
+    /gate/F_7/geometry/setYLength 6 cm
+    ### 125 * 2 + 28 um 
+    /gate/F_7/geometry/setZLength 0.278 mm
+    /gate/F_7/vis/setColor white
+    #/gate/F_7/vis/forceWireframe
+    /gate/F_7/vis/forceSolid
+    /gate/F_7/placement/setTranslation 0. 0. 13.80700000000000000000 mm
+  
+    /gate/F_7/daughters/name F_7_ActiveLayer
+    /gate/F_7/daughters/insert box
+    ### 
+    /gate/F_7_ActiveLayer/setMaterial Active_Layer_EBT3 
+    #EBT3_ActiveLayer
+    /gate/F_7_ActiveLayer/geometry/setXLength 6 cm
+    /gate/F_7_ActiveLayer/geometry/setYLength 6 cm
+    ###  
+    /gate/F_7_ActiveLayer/geometry/setZLength 0.028 mm
+    /gate/F_7_ActiveLayer/vis/setColor blue
+    #/gate/F_7_ActiveLayer/vis/forceWireframe
+    /gate/F_7_ActiveLayer/vis/forceSolid
+    /gate/F_7_ActiveLayer/placement/setTranslation 0. 0. 0. mm
+  
+
+    ##############################################################################################################################################
+    # F_8
+    ##############################################################################################################################################
+ 
+    /gate/Stack_1/daughters/name F_8
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/F_8/setMaterial Layer_EBT3
+    /gate/F_8/geometry/setXLength 6 cm
+    /gate/F_8/geometry/setYLength 6 cm
+    ### 125 * 2 + 28 um 
+    /gate/F_8/geometry/setZLength 0.278 mm
+    /gate/F_8/vis/setColor white
+    #/gate/F_8/vis/forceWireframe
+    /gate/F_8/vis/forceSolid
+    /gate/F_8/placement/setTranslation 0. 0. 14.08500000000000000000 mm
+  
+    /gate/F_8/daughters/name F_8_ActiveLayer
+    /gate/F_8/daughters/insert box
+    ### 
+    /gate/F_8_ActiveLayer/setMaterial Active_Layer_EBT3 
+    #EBT3_ActiveLayer
+    /gate/F_8_ActiveLayer/geometry/setXLength 6 cm
+    /gate/F_8_ActiveLayer/geometry/setYLength 6 cm
+    ###  
+    /gate/F_8_ActiveLayer/geometry/setZLength 0.028 mm
+    /gate/F_8_ActiveLayer/vis/setColor blue
+    #/gate/F_8_ActiveLayer/vis/forceWireframe
+    /gate/F_8_ActiveLayer/vis/forceSolid
+    /gate/F_8_ActiveLayer/placement/setTranslation 0. 0. 0. mm
+  
+    
+    ##############################################################################################################################################
+    # B_5
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name B_5
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/B_5/setMaterial  G4_PLEXIGLASS
+    /gate/B_5/geometry/setXLength 10 cm
+    /gate/B_5/geometry/setYLength 10 cm
+    /gate/B_5/geometry/setZLength 4.776 mm
+    /gate/B_5/vis/setColor white
+    #/gate/B_5/vis/forceWireframe
+    /gate/B_5/vis/forceSolid
+    /gate/B_5/placement/setTranslation 0. 0. 16.61200000000000000000 mm
+  

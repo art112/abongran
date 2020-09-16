@@ -1,0 +1,202 @@
+##############################################################################################################################################
+# Stack_ManipZebra_28_05_20_v2 Actor
+##############################################################################################################################################
+    
+    ##############################################################################################################################################
+    # Stack_1 Stack_1_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor Stack_1_Actor
+    /gate/actor/Stack_1_Actor/save output/Stack_1_Actor.root
+    /gate/actor/Stack_1_Actor/attachTo Stack_1
+    /gate/actor/Stack_1_Actor/setSize 1 1 38.000 mm
+    /gate/actor/Stack_1_Actor/setResolution 1 1 3800
+    /gate/actor/Stack_1_Actor/saveEveryNSeconds 60
+    /gate/actor/Stack_1_Actor/stepHitType random
+    /gate/actor/Stack_1_Actor/enableEdep true
+    /gate/actor/Stack_1_Actor/enableUncertaintyEdep true
+    /gate/actor/Stack_1_Actor/enableSquaredEdep true
+    /gate/actor/Stack_1_Actor/enableDose true
+    /gate/actor/Stack_1_Actor/enableUncertaintyDose true
+    /gate/actor/Stack_1_Actor/enableSquaredDose true
+    /gate/actor/Stack_1_Actor/enableDoseToWater true
+    /gate/actor/Stack_1_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/Stack_1_Actor/enableSquaredEdep true
+    /gate/actor/Stack_1_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # F_1_ActiveLayer F_1_ActiveLayer_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor F_1_ActiveLayer_Actor
+    /gate/actor/F_1_ActiveLayer_Actor/save output/F_1_ActiveLayer_Actor.root
+    /gate/actor/F_1_ActiveLayer_Actor/attachTo F_1_ActiveLayer
+    /gate/actor/F_1_ActiveLayer_Actor/setResolution 600 600 1
+    /gate/actor/F_1_ActiveLayer_Actor/saveEveryNSeconds 60
+    /gate/actor/F_1_ActiveLayer_Actor/stepHitType random
+    /gate/actor/F_1_ActiveLayer_Actor/enableEdep true
+    /gate/actor/F_1_ActiveLayer_Actor/enableUncertaintyEdep true
+    /gate/actor/F_1_ActiveLayer_Actor/enableSquaredEdep false
+    /gate/actor/F_1_ActiveLayer_Actor/enableDose true
+    /gate/actor/F_1_ActiveLayer_Actor/enableUncertaintyDose true
+    /gate/actor/F_1_ActiveLayer_Actor/enableSquaredDose false
+    /gate/actor/F_1_ActiveLayer_Actor/enableDoseToWater true
+    /gate/actor/F_1_ActiveLayer_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/F_1_ActiveLayer_Actor/enableSquaredDoseToWater false
+    /gate/actor/F_1_ActiveLayer_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # F_2_ActiveLayer F_2_ActiveLayer_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor F_2_ActiveLayer_Actor
+    /gate/actor/F_2_ActiveLayer_Actor/save output/F_2_ActiveLayer_Actor.root
+    /gate/actor/F_2_ActiveLayer_Actor/attachTo F_2_ActiveLayer
+    /gate/actor/F_2_ActiveLayer_Actor/setResolution 600 600 1
+    /gate/actor/F_2_ActiveLayer_Actor/saveEveryNSeconds 60
+    /gate/actor/F_2_ActiveLayer_Actor/stepHitType random
+    /gate/actor/F_2_ActiveLayer_Actor/enableEdep true
+    /gate/actor/F_2_ActiveLayer_Actor/enableUncertaintyEdep true
+    /gate/actor/F_2_ActiveLayer_Actor/enableSquaredEdep false
+    /gate/actor/F_2_ActiveLayer_Actor/enableDose true
+    /gate/actor/F_2_ActiveLayer_Actor/enableUncertaintyDose true
+    /gate/actor/F_2_ActiveLayer_Actor/enableSquaredDose false
+    /gate/actor/F_2_ActiveLayer_Actor/enableDoseToWater true
+    /gate/actor/F_2_ActiveLayer_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/F_2_ActiveLayer_Actor/enableSquaredDoseToWater false
+    /gate/actor/F_2_ActiveLayer_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # F_3_ActiveLayer F_3_ActiveLayer_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor F_3_ActiveLayer_Actor
+    /gate/actor/F_3_ActiveLayer_Actor/save output/F_3_ActiveLayer_Actor.root
+    /gate/actor/F_3_ActiveLayer_Actor/attachTo F_3_ActiveLayer
+    /gate/actor/F_3_ActiveLayer_Actor/setResolution 600 600 1
+    /gate/actor/F_3_ActiveLayer_Actor/saveEveryNSeconds 60
+    /gate/actor/F_3_ActiveLayer_Actor/stepHitType random
+    /gate/actor/F_3_ActiveLayer_Actor/enableEdep true
+    /gate/actor/F_3_ActiveLayer_Actor/enableUncertaintyEdep true
+    /gate/actor/F_3_ActiveLayer_Actor/enableSquaredEdep false
+    /gate/actor/F_3_ActiveLayer_Actor/enableDose true
+    /gate/actor/F_3_ActiveLayer_Actor/enableUncertaintyDose true
+    /gate/actor/F_3_ActiveLayer_Actor/enableSquaredDose false
+    /gate/actor/F_3_ActiveLayer_Actor/enableDoseToWater true
+    /gate/actor/F_3_ActiveLayer_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/F_3_ActiveLayer_Actor/enableSquaredDoseToWater false
+    /gate/actor/F_3_ActiveLayer_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # F_4_ActiveLayer F_4_ActiveLayer_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor F_4_ActiveLayer_Actor
+    /gate/actor/F_4_ActiveLayer_Actor/save output/F_4_ActiveLayer_Actor.root
+    /gate/actor/F_4_ActiveLayer_Actor/attachTo F_4_ActiveLayer
+    /gate/actor/F_4_ActiveLayer_Actor/setResolution 600 600 1
+    /gate/actor/F_4_ActiveLayer_Actor/saveEveryNSeconds 60
+    /gate/actor/F_4_ActiveLayer_Actor/stepHitType random
+    /gate/actor/F_4_ActiveLayer_Actor/enableEdep true
+    /gate/actor/F_4_ActiveLayer_Actor/enableUncertaintyEdep true
+    /gate/actor/F_4_ActiveLayer_Actor/enableSquaredEdep false
+    /gate/actor/F_4_ActiveLayer_Actor/enableDose true
+    /gate/actor/F_4_ActiveLayer_Actor/enableUncertaintyDose true
+    /gate/actor/F_4_ActiveLayer_Actor/enableSquaredDose false
+    /gate/actor/F_4_ActiveLayer_Actor/enableDoseToWater true
+    /gate/actor/F_4_ActiveLayer_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/F_4_ActiveLayer_Actor/enableSquaredDoseToWater false
+    /gate/actor/F_4_ActiveLayer_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # F_5_ActiveLayer F_5_ActiveLayer_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor F_5_ActiveLayer_Actor
+    /gate/actor/F_5_ActiveLayer_Actor/save output/F_5_ActiveLayer_Actor.root
+    /gate/actor/F_5_ActiveLayer_Actor/attachTo F_5_ActiveLayer
+    /gate/actor/F_5_ActiveLayer_Actor/setResolution 600 600 1
+    /gate/actor/F_5_ActiveLayer_Actor/saveEveryNSeconds 60
+    /gate/actor/F_5_ActiveLayer_Actor/stepHitType random
+    /gate/actor/F_5_ActiveLayer_Actor/enableEdep true
+    /gate/actor/F_5_ActiveLayer_Actor/enableUncertaintyEdep true
+    /gate/actor/F_5_ActiveLayer_Actor/enableSquaredEdep false
+    /gate/actor/F_5_ActiveLayer_Actor/enableDose true
+    /gate/actor/F_5_ActiveLayer_Actor/enableUncertaintyDose true
+    /gate/actor/F_5_ActiveLayer_Actor/enableSquaredDose false
+    /gate/actor/F_5_ActiveLayer_Actor/enableDoseToWater true
+    /gate/actor/F_5_ActiveLayer_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/F_5_ActiveLayer_Actor/enableSquaredDoseToWater false
+    /gate/actor/F_5_ActiveLayer_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # F_6_ActiveLayer F_6_ActiveLayer_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor F_6_ActiveLayer_Actor
+    /gate/actor/F_6_ActiveLayer_Actor/save output/F_6_ActiveLayer_Actor.root
+    /gate/actor/F_6_ActiveLayer_Actor/attachTo F_6_ActiveLayer
+    /gate/actor/F_6_ActiveLayer_Actor/setResolution 600 600 1
+    /gate/actor/F_6_ActiveLayer_Actor/saveEveryNSeconds 60
+    /gate/actor/F_6_ActiveLayer_Actor/stepHitType random
+    /gate/actor/F_6_ActiveLayer_Actor/enableEdep true
+    /gate/actor/F_6_ActiveLayer_Actor/enableUncertaintyEdep true
+    /gate/actor/F_6_ActiveLayer_Actor/enableSquaredEdep false
+    /gate/actor/F_6_ActiveLayer_Actor/enableDose true
+    /gate/actor/F_6_ActiveLayer_Actor/enableUncertaintyDose true
+    /gate/actor/F_6_ActiveLayer_Actor/enableSquaredDose false
+    /gate/actor/F_6_ActiveLayer_Actor/enableDoseToWater true
+    /gate/actor/F_6_ActiveLayer_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/F_6_ActiveLayer_Actor/enableSquaredDoseToWater false
+    /gate/actor/F_6_ActiveLayer_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # F_7_ActiveLayer F_7_ActiveLayer_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor F_7_ActiveLayer_Actor
+    /gate/actor/F_7_ActiveLayer_Actor/save output/F_7_ActiveLayer_Actor.root
+    /gate/actor/F_7_ActiveLayer_Actor/attachTo F_7_ActiveLayer
+    /gate/actor/F_7_ActiveLayer_Actor/setResolution 600 600 1
+    /gate/actor/F_7_ActiveLayer_Actor/saveEveryNSeconds 60
+    /gate/actor/F_7_ActiveLayer_Actor/stepHitType random
+    /gate/actor/F_7_ActiveLayer_Actor/enableEdep true
+    /gate/actor/F_7_ActiveLayer_Actor/enableUncertaintyEdep true
+    /gate/actor/F_7_ActiveLayer_Actor/enableSquaredEdep false
+    /gate/actor/F_7_ActiveLayer_Actor/enableDose true
+    /gate/actor/F_7_ActiveLayer_Actor/enableUncertaintyDose true
+    /gate/actor/F_7_ActiveLayer_Actor/enableSquaredDose false
+    /gate/actor/F_7_ActiveLayer_Actor/enableDoseToWater true
+    /gate/actor/F_7_ActiveLayer_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/F_7_ActiveLayer_Actor/enableSquaredDoseToWater false
+    /gate/actor/F_7_ActiveLayer_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # F_8_ActiveLayer F_8_ActiveLayer_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor F_8_ActiveLayer_Actor
+    /gate/actor/F_8_ActiveLayer_Actor/save output/F_8_ActiveLayer_Actor.root
+    /gate/actor/F_8_ActiveLayer_Actor/attachTo F_8_ActiveLayer
+    /gate/actor/F_8_ActiveLayer_Actor/setResolution 600 600 1
+    /gate/actor/F_8_ActiveLayer_Actor/saveEveryNSeconds 60
+    /gate/actor/F_8_ActiveLayer_Actor/stepHitType random
+    /gate/actor/F_8_ActiveLayer_Actor/enableEdep true
+    /gate/actor/F_8_ActiveLayer_Actor/enableUncertaintyEdep true
+    /gate/actor/F_8_ActiveLayer_Actor/enableSquaredEdep false
+    /gate/actor/F_8_ActiveLayer_Actor/enableDose true
+    /gate/actor/F_8_ActiveLayer_Actor/enableUncertaintyDose true
+    /gate/actor/F_8_ActiveLayer_Actor/enableSquaredDose false
+    /gate/actor/F_8_ActiveLayer_Actor/enableDoseToWater true
+    /gate/actor/F_8_ActiveLayer_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/F_8_ActiveLayer_Actor/enableSquaredDoseToWater false
+    /gate/actor/F_8_ActiveLayer_Actor/enableNumberOfHits true
+  

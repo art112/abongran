@@ -1,0 +1,462 @@
+##############################################################################################################################################
+# Stack_ManipZebra_28_05_20_v3
+##############################################################################################################################################
+    
+    ##############################################################################################################################################
+    # Stack_1
+    ##############################################################################################################################################
+    
+    /gate/world/daughters/name Stack_1
+    /gate/world/daughters/insert box
+    ### 
+    /gate/Stack_1/setMaterial  G4_AIR
+    /gate/Stack_1/geometry/setXLength 4 cm
+    /gate/Stack_1/geometry/setYLength 4 cm
+    /gate/Stack_1/geometry/setZLength 38.000 mm
+    /gate/Stack_1/vis/setColor white
+    /gate/Stack_1/vis/forceWireframe
+    #/gate/Stack_1/vis/forceSolid
+    /gate/Stack_1/placement/setTranslation 0. 0. 1439.535 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_1
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_1
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_1/setMaterial  G4_PLEXIGLASS
+    /gate/BD_1/geometry/setXLength 4 cm
+    /gate/BD_1/geometry/setYLength 4 cm
+    /gate/BD_1/geometry/setZLength 1 mm
+    /gate/BD_1/vis/setColor white
+    #/gate/BD_1/vis/forceWireframe
+    /gate/BD_1/vis/forceSolid
+    /gate/BD_1/placement/setTranslation 0. 0. -18.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_2
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_2
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_2/setMaterial  G4_PLEXIGLASS
+    /gate/BD_2/geometry/setXLength 4 cm
+    /gate/BD_2/geometry/setYLength 4 cm
+    /gate/BD_2/geometry/setZLength 1 mm
+    /gate/BD_2/vis/setColor white
+    #/gate/BD_2/vis/forceWireframe
+    /gate/BD_2/vis/forceSolid
+    /gate/BD_2/placement/setTranslation 0. 0. -17.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_3
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_3
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_3/setMaterial  G4_PLEXIGLASS
+    /gate/BD_3/geometry/setXLength 4 cm
+    /gate/BD_3/geometry/setYLength 4 cm
+    /gate/BD_3/geometry/setZLength 1 mm
+    /gate/BD_3/vis/setColor white
+    #/gate/BD_3/vis/forceWireframe
+    /gate/BD_3/vis/forceSolid
+    /gate/BD_3/placement/setTranslation 0. 0. -16.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_4
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_4
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_4/setMaterial  G4_PLEXIGLASS
+    /gate/BD_4/geometry/setXLength 4 cm
+    /gate/BD_4/geometry/setYLength 4 cm
+    /gate/BD_4/geometry/setZLength 1 mm
+    /gate/BD_4/vis/setColor white
+    #/gate/BD_4/vis/forceWireframe
+    /gate/BD_4/vis/forceSolid
+    /gate/BD_4/placement/setTranslation 0. 0. -15.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_5
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_5
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_5/setMaterial  G4_PLEXIGLASS
+    /gate/BD_5/geometry/setXLength 4 cm
+    /gate/BD_5/geometry/setYLength 4 cm
+    /gate/BD_5/geometry/setZLength 1 mm
+    /gate/BD_5/vis/setColor white
+    #/gate/BD_5/vis/forceWireframe
+    /gate/BD_5/vis/forceSolid
+    /gate/BD_5/placement/setTranslation 0. 0. -14.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_6
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_6
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_6/setMaterial  G4_PLEXIGLASS
+    /gate/BD_6/geometry/setXLength 4 cm
+    /gate/BD_6/geometry/setYLength 4 cm
+    /gate/BD_6/geometry/setZLength 1 mm
+    /gate/BD_6/vis/setColor white
+    #/gate/BD_6/vis/forceWireframe
+    /gate/BD_6/vis/forceSolid
+    /gate/BD_6/placement/setTranslation 0. 0. -13.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_7
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_7
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_7/setMaterial  G4_PLEXIGLASS
+    /gate/BD_7/geometry/setXLength 4 cm
+    /gate/BD_7/geometry/setYLength 4 cm
+    /gate/BD_7/geometry/setZLength 1 mm
+    /gate/BD_7/vis/setColor white
+    #/gate/BD_7/vis/forceWireframe
+    /gate/BD_7/vis/forceSolid
+    /gate/BD_7/placement/setTranslation 0. 0. -12.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_8
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_8
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_8/setMaterial  G4_PLEXIGLASS
+    /gate/BD_8/geometry/setXLength 4 cm
+    /gate/BD_8/geometry/setYLength 4 cm
+    /gate/BD_8/geometry/setZLength 1 mm
+    /gate/BD_8/vis/setColor white
+    #/gate/BD_8/vis/forceWireframe
+    /gate/BD_8/vis/forceSolid
+    /gate/BD_8/placement/setTranslation 0. 0. -11.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_9
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_9
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_9/setMaterial  G4_PLEXIGLASS
+    /gate/BD_9/geometry/setXLength 4 cm
+    /gate/BD_9/geometry/setYLength 4 cm
+    /gate/BD_9/geometry/setZLength 1 mm
+    /gate/BD_9/vis/setColor white
+    #/gate/BD_9/vis/forceWireframe
+    /gate/BD_9/vis/forceSolid
+    /gate/BD_9/placement/setTranslation 0. 0. -10.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_10
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_10
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_10/setMaterial  G4_PLEXIGLASS
+    /gate/BD_10/geometry/setXLength 4 cm
+    /gate/BD_10/geometry/setYLength 4 cm
+    /gate/BD_10/geometry/setZLength 1 mm
+    /gate/BD_10/vis/setColor white
+    #/gate/BD_10/vis/forceWireframe
+    /gate/BD_10/vis/forceSolid
+    /gate/BD_10/placement/setTranslation 0. 0. -9.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_11
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_11
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_11/setMaterial  G4_PLEXIGLASS
+    /gate/BD_11/geometry/setXLength 4 cm
+    /gate/BD_11/geometry/setYLength 4 cm
+    /gate/BD_11/geometry/setZLength 1 mm
+    /gate/BD_11/vis/setColor white
+    #/gate/BD_11/vis/forceWireframe
+    /gate/BD_11/vis/forceSolid
+    /gate/BD_11/placement/setTranslation 0. 0. -8.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_12
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_12
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_12/setMaterial  G4_PLEXIGLASS
+    /gate/BD_12/geometry/setXLength 4 cm
+    /gate/BD_12/geometry/setYLength 4 cm
+    /gate/BD_12/geometry/setZLength 1 mm
+    /gate/BD_12/vis/setColor white
+    #/gate/BD_12/vis/forceWireframe
+    /gate/BD_12/vis/forceSolid
+    /gate/BD_12/placement/setTranslation 0. 0. -7.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_13
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_13
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_13/setMaterial  G4_PLEXIGLASS
+    /gate/BD_13/geometry/setXLength 4 cm
+    /gate/BD_13/geometry/setYLength 4 cm
+    /gate/BD_13/geometry/setZLength 1 mm
+    /gate/BD_13/vis/setColor white
+    #/gate/BD_13/vis/forceWireframe
+    /gate/BD_13/vis/forceSolid
+    /gate/BD_13/placement/setTranslation 0. 0. -6.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_14
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_14
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_14/setMaterial  G4_PLEXIGLASS
+    /gate/BD_14/geometry/setXLength 4 cm
+    /gate/BD_14/geometry/setYLength 4 cm
+    /gate/BD_14/geometry/setZLength 1 mm
+    /gate/BD_14/vis/setColor white
+    #/gate/BD_14/vis/forceWireframe
+    /gate/BD_14/vis/forceSolid
+    /gate/BD_14/placement/setTranslation 0. 0. -5.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_15
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_15
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_15/setMaterial  G4_PLEXIGLASS
+    /gate/BD_15/geometry/setXLength 4 cm
+    /gate/BD_15/geometry/setYLength 4 cm
+    /gate/BD_15/geometry/setZLength 1 mm
+    /gate/BD_15/vis/setColor white
+    #/gate/BD_15/vis/forceWireframe
+    /gate/BD_15/vis/forceSolid
+    /gate/BD_15/placement/setTranslation 0. 0. -4.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_16
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_16
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_16/setMaterial  G4_PLEXIGLASS
+    /gate/BD_16/geometry/setXLength 4 cm
+    /gate/BD_16/geometry/setYLength 4 cm
+    /gate/BD_16/geometry/setZLength 1 mm
+    /gate/BD_16/vis/setColor white
+    #/gate/BD_16/vis/forceWireframe
+    /gate/BD_16/vis/forceSolid
+    /gate/BD_16/placement/setTranslation 0. 0. -3.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_17
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_17
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_17/setMaterial  G4_PLEXIGLASS
+    /gate/BD_17/geometry/setXLength 4 cm
+    /gate/BD_17/geometry/setYLength 4 cm
+    /gate/BD_17/geometry/setZLength 1 mm
+    /gate/BD_17/vis/setColor white
+    #/gate/BD_17/vis/forceWireframe
+    /gate/BD_17/vis/forceSolid
+    /gate/BD_17/placement/setTranslation 0. 0. -2.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_18
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_18
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_18/setMaterial  G4_PLEXIGLASS
+    /gate/BD_18/geometry/setXLength 4 cm
+    /gate/BD_18/geometry/setYLength 4 cm
+    /gate/BD_18/geometry/setZLength 1 mm
+    /gate/BD_18/vis/setColor white
+    #/gate/BD_18/vis/forceWireframe
+    /gate/BD_18/vis/forceSolid
+    /gate/BD_18/placement/setTranslation 0. 0. -1.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_19
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_19
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_19/setMaterial  G4_PLEXIGLASS
+    /gate/BD_19/geometry/setXLength 4 cm
+    /gate/BD_19/geometry/setYLength 4 cm
+    /gate/BD_19/geometry/setZLength 1 mm
+    /gate/BD_19/vis/setColor white
+    #/gate/BD_19/vis/forceWireframe
+    /gate/BD_19/vis/forceSolid
+    /gate/BD_19/placement/setTranslation 0. 0. -.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_20
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_20
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_20/setMaterial  G4_PLEXIGLASS
+    /gate/BD_20/geometry/setXLength 4 cm
+    /gate/BD_20/geometry/setYLength 4 cm
+    /gate/BD_20/geometry/setZLength 1 mm
+    /gate/BD_20/vis/setColor white
+    #/gate/BD_20/vis/forceWireframe
+    /gate/BD_20/vis/forceSolid
+    /gate/BD_20/placement/setTranslation 0. 0. .50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_21
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_21
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_21/setMaterial  G4_PLEXIGLASS
+    /gate/BD_21/geometry/setXLength 4 cm
+    /gate/BD_21/geometry/setYLength 4 cm
+    /gate/BD_21/geometry/setZLength 1 mm
+    /gate/BD_21/vis/setColor white
+    #/gate/BD_21/vis/forceWireframe
+    /gate/BD_21/vis/forceSolid
+    /gate/BD_21/placement/setTranslation 0. 0. 1.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_22
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_22
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_22/setMaterial  G4_PLEXIGLASS
+    /gate/BD_22/geometry/setXLength 4 cm
+    /gate/BD_22/geometry/setYLength 4 cm
+    /gate/BD_22/geometry/setZLength 1 mm
+    /gate/BD_22/vis/setColor white
+    #/gate/BD_22/vis/forceWireframe
+    /gate/BD_22/vis/forceSolid
+    /gate/BD_22/placement/setTranslation 0. 0. 2.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_23
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_23
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_23/setMaterial  G4_PLEXIGLASS
+    /gate/BD_23/geometry/setXLength 4 cm
+    /gate/BD_23/geometry/setYLength 4 cm
+    /gate/BD_23/geometry/setZLength 1 mm
+    /gate/BD_23/vis/setColor white
+    #/gate/BD_23/vis/forceWireframe
+    /gate/BD_23/vis/forceSolid
+    /gate/BD_23/placement/setTranslation 0. 0. 3.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_24
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_24
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_24/setMaterial  G4_PLEXIGLASS
+    /gate/BD_24/geometry/setXLength 4 cm
+    /gate/BD_24/geometry/setYLength 4 cm
+    /gate/BD_24/geometry/setZLength 1 mm
+    /gate/BD_24/vis/setColor white
+    #/gate/BD_24/vis/forceWireframe
+    /gate/BD_24/vis/forceSolid
+    /gate/BD_24/placement/setTranslation 0. 0. 4.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # BD_25
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name BD_25
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/BD_25/setMaterial  G4_PLEXIGLASS
+    /gate/BD_25/geometry/setXLength 4 cm
+    /gate/BD_25/geometry/setYLength 4 cm
+    /gate/BD_25/geometry/setZLength 1 mm
+    /gate/BD_25/vis/setColor white
+    #/gate/BD_25/vis/forceWireframe
+    /gate/BD_25/vis/forceSolid
+    /gate/BD_25/placement/setTranslation 0. 0. 5.50000000000000000000 mm
+  
+    
+    ##############################################################################################################################################
+    # B_26
+    ##############################################################################################################################################
+    
+    /gate/Stack_1/daughters/name B_26
+    /gate/Stack_1/daughters/insert box
+    ### 
+    /gate/B_26/setMaterial  G4_PLEXIGLASS
+    /gate/B_26/geometry/setXLength 4 cm
+    /gate/B_26/geometry/setYLength 4 cm
+    /gate/B_26/geometry/setZLength 13 mm
+    /gate/B_26/vis/setColor white
+    #/gate/B_26/vis/forceWireframe
+    /gate/B_26/vis/forceSolid
+    /gate/B_26/placement/setTranslation 0. 0. 12.50000000000000000000 mm
+  

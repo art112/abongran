@@ -1,0 +1,576 @@
+##############################################################################################################################################
+# Stack_ManipZebra_28_05_20_v3 Actor
+##############################################################################################################################################
+    
+    ##############################################################################################################################################
+    # Stack_1 Stack_1_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor Stack_1_Actor
+    /gate/actor/Stack_1_Actor/save output/Stack_1_Actor.root
+    /gate/actor/Stack_1_Actor/attachTo Stack_1
+    /gate/actor/Stack_1_Actor/setSize 1 1 38.000 mm
+    /gate/actor/Stack_1_Actor/setResolution 1 1 3800
+    /gate/actor/Stack_1_Actor/saveEveryNSeconds 60
+    /gate/actor/Stack_1_Actor/stepHitType random
+    /gate/actor/Stack_1_Actor/enableEdep true
+    /gate/actor/Stack_1_Actor/enableUncertaintyEdep true
+    /gate/actor/Stack_1_Actor/enableSquaredEdep true
+    /gate/actor/Stack_1_Actor/enableDose true
+    /gate/actor/Stack_1_Actor/enableUncertaintyDose true
+    /gate/actor/Stack_1_Actor/enableSquaredDose true
+    /gate/actor/Stack_1_Actor/enableDoseToWater true
+    /gate/actor/Stack_1_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/Stack_1_Actor/enableSquaredEdep true
+    /gate/actor/Stack_1_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_1 BD_1_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_1_Actor
+    /gate/actor/BD_1_Actor/save output/BD_1_Actor.root
+    /gate/actor/BD_1_Actor/attachTo BD_1
+    /gate/actor/BD_1_Actor/setResolution 400 400 1
+    /gate/actor/BD_1_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_1_Actor/stepHitType random
+    /gate/actor/BD_1_Actor/enableEdep true
+    /gate/actor/BD_1_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_1_Actor/enableSquaredEdep false
+    /gate/actor/BD_1_Actor/enableDose true
+    /gate/actor/BD_1_Actor/enableUncertaintyDose true
+    /gate/actor/BD_1_Actor/enableSquaredDose false
+    /gate/actor/BD_1_Actor/enableDoseToWater true
+    /gate/actor/BD_1_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_1_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_1_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_2 BD_2_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_2_Actor
+    /gate/actor/BD_2_Actor/save output/BD_2_Actor.root
+    /gate/actor/BD_2_Actor/attachTo BD_2
+    /gate/actor/BD_2_Actor/setResolution 400 400 1
+    /gate/actor/BD_2_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_2_Actor/stepHitType random
+    /gate/actor/BD_2_Actor/enableEdep true
+    /gate/actor/BD_2_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_2_Actor/enableSquaredEdep false
+    /gate/actor/BD_2_Actor/enableDose true
+    /gate/actor/BD_2_Actor/enableUncertaintyDose true
+    /gate/actor/BD_2_Actor/enableSquaredDose false
+    /gate/actor/BD_2_Actor/enableDoseToWater true
+    /gate/actor/BD_2_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_2_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_2_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_3 BD_3_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_3_Actor
+    /gate/actor/BD_3_Actor/save output/BD_3_Actor.root
+    /gate/actor/BD_3_Actor/attachTo BD_3
+    /gate/actor/BD_3_Actor/setResolution 400 400 1
+    /gate/actor/BD_3_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_3_Actor/stepHitType random
+    /gate/actor/BD_3_Actor/enableEdep true
+    /gate/actor/BD_3_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_3_Actor/enableSquaredEdep false
+    /gate/actor/BD_3_Actor/enableDose true
+    /gate/actor/BD_3_Actor/enableUncertaintyDose true
+    /gate/actor/BD_3_Actor/enableSquaredDose false
+    /gate/actor/BD_3_Actor/enableDoseToWater true
+    /gate/actor/BD_3_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_3_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_3_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_4 BD_4_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_4_Actor
+    /gate/actor/BD_4_Actor/save output/BD_4_Actor.root
+    /gate/actor/BD_4_Actor/attachTo BD_4
+    /gate/actor/BD_4_Actor/setResolution 400 400 1
+    /gate/actor/BD_4_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_4_Actor/stepHitType random
+    /gate/actor/BD_4_Actor/enableEdep true
+    /gate/actor/BD_4_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_4_Actor/enableSquaredEdep false
+    /gate/actor/BD_4_Actor/enableDose true
+    /gate/actor/BD_4_Actor/enableUncertaintyDose true
+    /gate/actor/BD_4_Actor/enableSquaredDose false
+    /gate/actor/BD_4_Actor/enableDoseToWater true
+    /gate/actor/BD_4_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_4_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_4_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_5 BD_5_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_5_Actor
+    /gate/actor/BD_5_Actor/save output/BD_5_Actor.root
+    /gate/actor/BD_5_Actor/attachTo BD_5
+    /gate/actor/BD_5_Actor/setResolution 400 400 1
+    /gate/actor/BD_5_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_5_Actor/stepHitType random
+    /gate/actor/BD_5_Actor/enableEdep true
+    /gate/actor/BD_5_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_5_Actor/enableSquaredEdep false
+    /gate/actor/BD_5_Actor/enableDose true
+    /gate/actor/BD_5_Actor/enableUncertaintyDose true
+    /gate/actor/BD_5_Actor/enableSquaredDose false
+    /gate/actor/BD_5_Actor/enableDoseToWater true
+    /gate/actor/BD_5_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_5_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_5_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_6 BD_6_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_6_Actor
+    /gate/actor/BD_6_Actor/save output/BD_6_Actor.root
+    /gate/actor/BD_6_Actor/attachTo BD_6
+    /gate/actor/BD_6_Actor/setResolution 400 400 1
+    /gate/actor/BD_6_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_6_Actor/stepHitType random
+    /gate/actor/BD_6_Actor/enableEdep true
+    /gate/actor/BD_6_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_6_Actor/enableSquaredEdep false
+    /gate/actor/BD_6_Actor/enableDose true
+    /gate/actor/BD_6_Actor/enableUncertaintyDose true
+    /gate/actor/BD_6_Actor/enableSquaredDose false
+    /gate/actor/BD_6_Actor/enableDoseToWater true
+    /gate/actor/BD_6_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_6_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_6_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_7 BD_7_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_7_Actor
+    /gate/actor/BD_7_Actor/save output/BD_7_Actor.root
+    /gate/actor/BD_7_Actor/attachTo BD_7
+    /gate/actor/BD_7_Actor/setResolution 400 400 1
+    /gate/actor/BD_7_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_7_Actor/stepHitType random
+    /gate/actor/BD_7_Actor/enableEdep true
+    /gate/actor/BD_7_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_7_Actor/enableSquaredEdep false
+    /gate/actor/BD_7_Actor/enableDose true
+    /gate/actor/BD_7_Actor/enableUncertaintyDose true
+    /gate/actor/BD_7_Actor/enableSquaredDose false
+    /gate/actor/BD_7_Actor/enableDoseToWater true
+    /gate/actor/BD_7_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_7_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_7_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_8 BD_8_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_8_Actor
+    /gate/actor/BD_8_Actor/save output/BD_8_Actor.root
+    /gate/actor/BD_8_Actor/attachTo BD_8
+    /gate/actor/BD_8_Actor/setResolution 400 400 1
+    /gate/actor/BD_8_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_8_Actor/stepHitType random
+    /gate/actor/BD_8_Actor/enableEdep true
+    /gate/actor/BD_8_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_8_Actor/enableSquaredEdep false
+    /gate/actor/BD_8_Actor/enableDose true
+    /gate/actor/BD_8_Actor/enableUncertaintyDose true
+    /gate/actor/BD_8_Actor/enableSquaredDose false
+    /gate/actor/BD_8_Actor/enableDoseToWater true
+    /gate/actor/BD_8_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_8_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_8_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_9 BD_9_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_9_Actor
+    /gate/actor/BD_9_Actor/save output/BD_9_Actor.root
+    /gate/actor/BD_9_Actor/attachTo BD_9
+    /gate/actor/BD_9_Actor/setResolution 400 400 1
+    /gate/actor/BD_9_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_9_Actor/stepHitType random
+    /gate/actor/BD_9_Actor/enableEdep true
+    /gate/actor/BD_9_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_9_Actor/enableSquaredEdep false
+    /gate/actor/BD_9_Actor/enableDose true
+    /gate/actor/BD_9_Actor/enableUncertaintyDose true
+    /gate/actor/BD_9_Actor/enableSquaredDose false
+    /gate/actor/BD_9_Actor/enableDoseToWater true
+    /gate/actor/BD_9_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_9_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_9_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_10 BD_10_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_10_Actor
+    /gate/actor/BD_10_Actor/save output/BD_10_Actor.root
+    /gate/actor/BD_10_Actor/attachTo BD_10
+    /gate/actor/BD_10_Actor/setResolution 400 400 1
+    /gate/actor/BD_10_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_10_Actor/stepHitType random
+    /gate/actor/BD_10_Actor/enableEdep true
+    /gate/actor/BD_10_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_10_Actor/enableSquaredEdep false
+    /gate/actor/BD_10_Actor/enableDose true
+    /gate/actor/BD_10_Actor/enableUncertaintyDose true
+    /gate/actor/BD_10_Actor/enableSquaredDose false
+    /gate/actor/BD_10_Actor/enableDoseToWater true
+    /gate/actor/BD_10_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_10_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_10_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_11 BD_11_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_11_Actor
+    /gate/actor/BD_11_Actor/save output/BD_11_Actor.root
+    /gate/actor/BD_11_Actor/attachTo BD_11
+    /gate/actor/BD_11_Actor/setResolution 400 400 1
+    /gate/actor/BD_11_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_11_Actor/stepHitType random
+    /gate/actor/BD_11_Actor/enableEdep true
+    /gate/actor/BD_11_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_11_Actor/enableSquaredEdep false
+    /gate/actor/BD_11_Actor/enableDose true
+    /gate/actor/BD_11_Actor/enableUncertaintyDose true
+    /gate/actor/BD_11_Actor/enableSquaredDose false
+    /gate/actor/BD_11_Actor/enableDoseToWater true
+    /gate/actor/BD_11_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_11_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_11_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_12 BD_12_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_12_Actor
+    /gate/actor/BD_12_Actor/save output/BD_12_Actor.root
+    /gate/actor/BD_12_Actor/attachTo BD_12
+    /gate/actor/BD_12_Actor/setResolution 400 400 1
+    /gate/actor/BD_12_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_12_Actor/stepHitType random
+    /gate/actor/BD_12_Actor/enableEdep true
+    /gate/actor/BD_12_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_12_Actor/enableSquaredEdep false
+    /gate/actor/BD_12_Actor/enableDose true
+    /gate/actor/BD_12_Actor/enableUncertaintyDose true
+    /gate/actor/BD_12_Actor/enableSquaredDose false
+    /gate/actor/BD_12_Actor/enableDoseToWater true
+    /gate/actor/BD_12_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_12_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_12_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_13 BD_13_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_13_Actor
+    /gate/actor/BD_13_Actor/save output/BD_13_Actor.root
+    /gate/actor/BD_13_Actor/attachTo BD_13
+    /gate/actor/BD_13_Actor/setResolution 400 400 1
+    /gate/actor/BD_13_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_13_Actor/stepHitType random
+    /gate/actor/BD_13_Actor/enableEdep true
+    /gate/actor/BD_13_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_13_Actor/enableSquaredEdep false
+    /gate/actor/BD_13_Actor/enableDose true
+    /gate/actor/BD_13_Actor/enableUncertaintyDose true
+    /gate/actor/BD_13_Actor/enableSquaredDose false
+    /gate/actor/BD_13_Actor/enableDoseToWater true
+    /gate/actor/BD_13_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_13_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_13_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_14 BD_14_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_14_Actor
+    /gate/actor/BD_14_Actor/save output/BD_14_Actor.root
+    /gate/actor/BD_14_Actor/attachTo BD_14
+    /gate/actor/BD_14_Actor/setResolution 400 400 1
+    /gate/actor/BD_14_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_14_Actor/stepHitType random
+    /gate/actor/BD_14_Actor/enableEdep true
+    /gate/actor/BD_14_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_14_Actor/enableSquaredEdep false
+    /gate/actor/BD_14_Actor/enableDose true
+    /gate/actor/BD_14_Actor/enableUncertaintyDose true
+    /gate/actor/BD_14_Actor/enableSquaredDose false
+    /gate/actor/BD_14_Actor/enableDoseToWater true
+    /gate/actor/BD_14_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_14_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_14_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_15 BD_15_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_15_Actor
+    /gate/actor/BD_15_Actor/save output/BD_15_Actor.root
+    /gate/actor/BD_15_Actor/attachTo BD_15
+    /gate/actor/BD_15_Actor/setResolution 400 400 1
+    /gate/actor/BD_15_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_15_Actor/stepHitType random
+    /gate/actor/BD_15_Actor/enableEdep true
+    /gate/actor/BD_15_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_15_Actor/enableSquaredEdep false
+    /gate/actor/BD_15_Actor/enableDose true
+    /gate/actor/BD_15_Actor/enableUncertaintyDose true
+    /gate/actor/BD_15_Actor/enableSquaredDose false
+    /gate/actor/BD_15_Actor/enableDoseToWater true
+    /gate/actor/BD_15_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_15_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_15_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_16 BD_16_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_16_Actor
+    /gate/actor/BD_16_Actor/save output/BD_16_Actor.root
+    /gate/actor/BD_16_Actor/attachTo BD_16
+    /gate/actor/BD_16_Actor/setResolution 400 400 1
+    /gate/actor/BD_16_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_16_Actor/stepHitType random
+    /gate/actor/BD_16_Actor/enableEdep true
+    /gate/actor/BD_16_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_16_Actor/enableSquaredEdep false
+    /gate/actor/BD_16_Actor/enableDose true
+    /gate/actor/BD_16_Actor/enableUncertaintyDose true
+    /gate/actor/BD_16_Actor/enableSquaredDose false
+    /gate/actor/BD_16_Actor/enableDoseToWater true
+    /gate/actor/BD_16_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_16_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_16_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_17 BD_17_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_17_Actor
+    /gate/actor/BD_17_Actor/save output/BD_17_Actor.root
+    /gate/actor/BD_17_Actor/attachTo BD_17
+    /gate/actor/BD_17_Actor/setResolution 400 400 1
+    /gate/actor/BD_17_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_17_Actor/stepHitType random
+    /gate/actor/BD_17_Actor/enableEdep true
+    /gate/actor/BD_17_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_17_Actor/enableSquaredEdep false
+    /gate/actor/BD_17_Actor/enableDose true
+    /gate/actor/BD_17_Actor/enableUncertaintyDose true
+    /gate/actor/BD_17_Actor/enableSquaredDose false
+    /gate/actor/BD_17_Actor/enableDoseToWater true
+    /gate/actor/BD_17_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_17_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_17_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_18 BD_18_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_18_Actor
+    /gate/actor/BD_18_Actor/save output/BD_18_Actor.root
+    /gate/actor/BD_18_Actor/attachTo BD_18
+    /gate/actor/BD_18_Actor/setResolution 400 400 1
+    /gate/actor/BD_18_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_18_Actor/stepHitType random
+    /gate/actor/BD_18_Actor/enableEdep true
+    /gate/actor/BD_18_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_18_Actor/enableSquaredEdep false
+    /gate/actor/BD_18_Actor/enableDose true
+    /gate/actor/BD_18_Actor/enableUncertaintyDose true
+    /gate/actor/BD_18_Actor/enableSquaredDose false
+    /gate/actor/BD_18_Actor/enableDoseToWater true
+    /gate/actor/BD_18_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_18_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_18_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_19 BD_19_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_19_Actor
+    /gate/actor/BD_19_Actor/save output/BD_19_Actor.root
+    /gate/actor/BD_19_Actor/attachTo BD_19
+    /gate/actor/BD_19_Actor/setResolution 400 400 1
+    /gate/actor/BD_19_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_19_Actor/stepHitType random
+    /gate/actor/BD_19_Actor/enableEdep true
+    /gate/actor/BD_19_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_19_Actor/enableSquaredEdep false
+    /gate/actor/BD_19_Actor/enableDose true
+    /gate/actor/BD_19_Actor/enableUncertaintyDose true
+    /gate/actor/BD_19_Actor/enableSquaredDose false
+    /gate/actor/BD_19_Actor/enableDoseToWater true
+    /gate/actor/BD_19_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_19_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_19_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_20 BD_20_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_20_Actor
+    /gate/actor/BD_20_Actor/save output/BD_20_Actor.root
+    /gate/actor/BD_20_Actor/attachTo BD_20
+    /gate/actor/BD_20_Actor/setResolution 400 400 1
+    /gate/actor/BD_20_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_20_Actor/stepHitType random
+    /gate/actor/BD_20_Actor/enableEdep true
+    /gate/actor/BD_20_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_20_Actor/enableSquaredEdep false
+    /gate/actor/BD_20_Actor/enableDose true
+    /gate/actor/BD_20_Actor/enableUncertaintyDose true
+    /gate/actor/BD_20_Actor/enableSquaredDose false
+    /gate/actor/BD_20_Actor/enableDoseToWater true
+    /gate/actor/BD_20_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_20_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_20_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_21 BD_21_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_21_Actor
+    /gate/actor/BD_21_Actor/save output/BD_21_Actor.root
+    /gate/actor/BD_21_Actor/attachTo BD_21
+    /gate/actor/BD_21_Actor/setResolution 400 400 1
+    /gate/actor/BD_21_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_21_Actor/stepHitType random
+    /gate/actor/BD_21_Actor/enableEdep true
+    /gate/actor/BD_21_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_21_Actor/enableSquaredEdep false
+    /gate/actor/BD_21_Actor/enableDose true
+    /gate/actor/BD_21_Actor/enableUncertaintyDose true
+    /gate/actor/BD_21_Actor/enableSquaredDose false
+    /gate/actor/BD_21_Actor/enableDoseToWater true
+    /gate/actor/BD_21_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_21_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_21_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_22 BD_22_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_22_Actor
+    /gate/actor/BD_22_Actor/save output/BD_22_Actor.root
+    /gate/actor/BD_22_Actor/attachTo BD_22
+    /gate/actor/BD_22_Actor/setResolution 400 400 1
+    /gate/actor/BD_22_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_22_Actor/stepHitType random
+    /gate/actor/BD_22_Actor/enableEdep true
+    /gate/actor/BD_22_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_22_Actor/enableSquaredEdep false
+    /gate/actor/BD_22_Actor/enableDose true
+    /gate/actor/BD_22_Actor/enableUncertaintyDose true
+    /gate/actor/BD_22_Actor/enableSquaredDose false
+    /gate/actor/BD_22_Actor/enableDoseToWater true
+    /gate/actor/BD_22_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_22_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_22_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_23 BD_23_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_23_Actor
+    /gate/actor/BD_23_Actor/save output/BD_23_Actor.root
+    /gate/actor/BD_23_Actor/attachTo BD_23
+    /gate/actor/BD_23_Actor/setResolution 400 400 1
+    /gate/actor/BD_23_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_23_Actor/stepHitType random
+    /gate/actor/BD_23_Actor/enableEdep true
+    /gate/actor/BD_23_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_23_Actor/enableSquaredEdep false
+    /gate/actor/BD_23_Actor/enableDose true
+    /gate/actor/BD_23_Actor/enableUncertaintyDose true
+    /gate/actor/BD_23_Actor/enableSquaredDose false
+    /gate/actor/BD_23_Actor/enableDoseToWater true
+    /gate/actor/BD_23_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_23_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_23_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_24 BD_24_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_24_Actor
+    /gate/actor/BD_24_Actor/save output/BD_24_Actor.root
+    /gate/actor/BD_24_Actor/attachTo BD_24
+    /gate/actor/BD_24_Actor/setResolution 400 400 1
+    /gate/actor/BD_24_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_24_Actor/stepHitType random
+    /gate/actor/BD_24_Actor/enableEdep true
+    /gate/actor/BD_24_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_24_Actor/enableSquaredEdep false
+    /gate/actor/BD_24_Actor/enableDose true
+    /gate/actor/BD_24_Actor/enableUncertaintyDose true
+    /gate/actor/BD_24_Actor/enableSquaredDose false
+    /gate/actor/BD_24_Actor/enableDoseToWater true
+    /gate/actor/BD_24_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_24_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_24_Actor/enableNumberOfHits true
+  
+    
+    ##############################################################################################################################################
+    # BD_25 BD_25_Actor
+    ##############################################################################################################################################
+
+    /gate/actor/addActor DoseActor BD_25_Actor
+    /gate/actor/BD_25_Actor/save output/BD_25_Actor.root
+    /gate/actor/BD_25_Actor/attachTo BD_25
+    /gate/actor/BD_25_Actor/setResolution 400 400 1
+    /gate/actor/BD_25_Actor/saveEveryNSeconds 60
+    /gate/actor/BD_25_Actor/stepHitType random
+    /gate/actor/BD_25_Actor/enableEdep true
+    /gate/actor/BD_25_Actor/enableUncertaintyEdep true
+    /gate/actor/BD_25_Actor/enableSquaredEdep false
+    /gate/actor/BD_25_Actor/enableDose true
+    /gate/actor/BD_25_Actor/enableUncertaintyDose true
+    /gate/actor/BD_25_Actor/enableSquaredDose false
+    /gate/actor/BD_25_Actor/enableDoseToWater true
+    /gate/actor/BD_25_Actor/enableUncertaintyDoseToWater true
+    /gate/actor/BD_25_Actor/enableSquaredDoseToWater false
+    /gate/actor/BD_25_Actor/enableNumberOfHits true
+  
