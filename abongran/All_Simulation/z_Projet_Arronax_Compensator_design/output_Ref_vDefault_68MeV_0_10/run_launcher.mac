@@ -1,0 +1,202 @@
+   
+# Arthur -> 16/12/19 | Origine -> Sophie
+
+#=====================================================
+# VERBOSITY
+#=====================================================
+/control/execute ../mac/verbose.mac
+
+#=====================================================
+# VISUALISATION
+#=====================================================
+#/control/execute ../mac/visu.mac
+
+#=====================================================
+#Geometry Material
+#=====================================================
+
+# warning custom GateMaterials !
+/gate/geometry/setMaterialDatabase ../data/Material_General/GateMaterials.db
+
+#=====================================================
+#World
+#=====================================================
+/gate/world/geometry/setXLength 1.0 m
+/gate/world/geometry/setYLength 1.0 m
+/gate/world/geometry/setZLength 4.0 m
+/gate/world/setMaterial G4_AIR
+
+/control/saveHistory SaveHistory.txt
+
+#=====================================================
+#System
+#=====================================================
+
+#/control/execute ../geometry/Kapton_Collimateur_Tungsten_CorrectionCharbel.mac
+
+/control/execute /scratch/8651370.1.long/All_Simulation/geometry/AttachTOVolumeKapton_Collimateur_Tungsten_CorrectionCharbel.mac
+
+
+#===========================================
+# CIBLE 
+#===========================================
+
+/gate/world/daughters/name Cube_After
+/gate/world/daughters/insert cylinder
+/gate/Cube_After/setMaterial G4_WATER
+/gate/Cube_After/geometry/setRmin 0. cm
+/gate/Cube_After/geometry/setRmax 0.5 cm
+/gate/Cube_After/geometry/setHeight 4. cm
+/gate/Cube_After/vis/setColor white
+/gate/Cube_After/vis/forceSolid true
+
+#TRANSLATION à partir du centre du volume
+/gate/Cube_After/placement/setTranslation 0. 0. 168.5 cm
+
+
+
+
+#====================================
+#Physics GATE
+#====================================
+
+#/control/execute ../physics_list/GateV8_BIC.mac
+/control/execute ../physics_list/GateV8_BIC_HP.mac
+#/control/execute ../physics_list/GateV7.mac
+
+#====================================
+
+
+#cut world
+/gate/physics/Gamma/SetCutInRegion world 10 mm
+/gate/physics/Electron/SetCutInRegion world 10 mm
+/gate/physics/Proton/SetCutInRegion world 10 mm
+/gate/physics/Positron/SetCutInRegion world 10 mm
+
+#/gate/physics/Gamma/SetCutInRegion colli1 10 mm
+#/gate/physics/Electron/SetCutInRegion colli1 10 mm
+#/gate/physics/Proton/SetCutInRegion colli1 10 mm
+#/gate/physics/Positron/SetCutInRegion colli1 10 mm
+
+
+#/gate/physics/Gamma/SetCutInRegion InputImageOfProtocol 0.1 mm
+#/gate/physics/Electron/SetCutInRegion InputImageOfProtocol 0.1 mm
+#/gate/physics/Proton/SetCutInRegion InputImageOfProtocol 0.1 mm
+#/gate/physics/Positron/SetCutInRegion InputImageOfProtocol 0.1 mm
+
+/gate/physics/Gamma/SetCutInRegion Cube_After 0.1 mm
+/gate/physics/Electron/SetCutInRegion Cube_After 0.01 mm
+/gate/physics/Proton/SetCutInRegion Cube_After 0.01 mm
+/gate/physics/Positron/SetCutInRegion Cube_After 0.1 mm
+
+/gate/physics/displayCuts
+
+#steplimiter
+#/gate/physics/SetMaxStepSizeInRegion InputImageOfProtocol 0.1 mm
+#/gate/physics/SetMaxStepSizeInRegion cuve 0.1 mm
+
+
+/gate/physics/setEMin 0.1 keV
+/gate/physics/setEMax 10 GeV
+
+/gate/physics/setDEDXBinning 500
+/gate/physics/setLambdaBinning 500
+
+        #====================================
+        #Actor
+        #====================================
+        #DOSE ACTOR
+        # Pemet de retrouver les émméteurs beta+
+        /control/execute ../geometry/BetaPlus_Actor.mac
+#         /control/execute /scratch/8651370.1.long/All_Simulation/geometry/AttachTOvolume_Kapton_Collimateur_Tungsten_CorrectionCharbel_Frite_PhaseSpaceActor_Actor.mac
+        /control/execute /scratch/8651370.1.long/All_Simulation/geometry/AttachTOvolume_Kapton_Collimateur_Tungsten_CorrectionCharbel_Frite_PhaseSpaceActor_Actor_Light.mac
+        
+        /gate/actor/addActor SimulationStatisticActor     stat
+        /gate/actor/stat/save    output/stat.ascii
+        #====================================================================
+        #DOSE ACTOR All
+        #====================================================================
+        /gate/actor/addActor DoseActor dose_Cube_after
+        /gate/actor/dose_Cube_after/save output/dose_Cube_after_All.root
+        /gate/actor/dose_Cube_after/attachTo Cube_After
+        /gate/actor/dose_Cube_after/setResolution 1 1 4000
+        /gate/actor/dose_Cube_after/saveEveryNSeconds 60
+        /gate/actor/dose_Cube_after/stepHitType random
+        /gate/actor/dose_Cube_after/enableEdep true
+        /gate/actor/dose_Cube_after/enableUncertaintyEdep true
+        /gate/actor/dose_Cube_after/enableSquaredEdep true
+        /gate/actor/dose_Cube_after/enableDose true
+        /gate/actor/dose_Cube_after/enableUncertaintyDose true
+        /gate/actor/dose_Cube_after/enableSquaredDose true
+        /gate/actor/dose_Cube_after/enableDoseToWater true
+        /gate/actor/dose_Cube_after/enableUncertaintyDoseToWater true
+        /gate/actor/dose_Cube_after/enableSquaredEdep true
+        /gate/actor/dose_Cube_after/enableNumberOfHits true
+        #Phase space actor
+        /gate/actor/addActor PhaseSpaceActor              PhaseSpace_Entrance_Cube_After
+        /gate/actor/PhaseSpace_Entrance_Cube_After/save                     output/PhaseSpace_Entrance_Cube_After.root
+        /gate/actor/PhaseSpace_Entrance_Cube_After/attachTo                 Cube_After
+        /gate/actor/PhaseSpace_Entrance_Cube_After/enableEkine              true
+        /gate/actor/PhaseSpace_Entrance_Cube_After/enableXPosition          true
+        /gate/actor/PhaseSpace_Entrance_Cube_After/enableYPosition          true
+        /gate/actor/PhaseSpace_Entrance_Cube_After/enableZPosition          true
+        /gate/actor/PhaseSpace_Entrance_Cube_After/enableXDirection         false
+        /gate/actor/PhaseSpace_Entrance_Cube_After/enableYDirection         false
+        /gate/actor/PhaseSpace_Entrance_Cube_After/enableZDirection         false
+        /gate/actor/PhaseSpace_Entrance_Cube_After/enableProductionVolume   false
+        /gate/actor/PhaseSpace_Entrance_Cube_After/enableProductionProcess  false
+        /gate/actor/PhaseSpace_Entrance_Cube_After/enableParticleName       false
+        /gate/actor/PhaseSpace_Entrance_Cube_After/enableWeight             false
+        /gate/actor/PhaseSpace_Entrance_Cube_After/enablePrimaryEnergy      false
+        /gate/actor/PhaseSpace_Entrance_Cube_After/addFilter                       particleFilter
+        /gate/actor/PhaseSpace_Entrance_Cube_After/particleFilter/addParticle      proton
+
+#====================================
+#Initialization
+#====================================
+
+/gate/run/initialize
+
+
+#====================================
+#Source
+#====================================
+
+#type
+/gate/source/addSource pbeam gps
+/gate/source/pbeam/gps/particle proton
+
+
+#forme
+/gate/source/pbeam/gps/type Beam
+/gate/source/pbeam/gps/shape Circle
+
+/gate/source/pbeam/gps/pos/sigma_x 2 mm
+/gate/source/pbeam/gps/pos/sigma_y 3 mm
+
+#localisation
+/gate/source/pbeam/gps/centre 0 0 -0.01 mm
+/gate/source/pbeam/gps/direction 0 0 1
+
+#energie
+/gate/source/pbeam/gps/ene/mono 68 MeV
+/gate/source/pbeam/gps/ene/type Gauss
+/gate/source/pbeam/gps/ene/sigma 0 MeV
+
+#/gate/source/pbeam/gps/setTestFlag true
+
+#====================================
+#Initialization
+#====================================
+
+#/gate/run/initialize
+
+#graine 
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed auto
+
+#nb particule
+/gate/application/setTotalNumberOfPrimaries 10
+/gate/application/start
+
+

@@ -1,0 +1,421 @@
+   
+# Arthur -> 16/12/19 | Origine -> Sophie
+
+#=====================================================
+# VERBOSITY
+#=====================================================
+/control/execute ../mac/verbose.mac
+
+#=====================================================
+# VISUALISATION
+#=====================================================
+/control/execute ../mac/visu.mac
+
+#=====================================================
+#Geometry Material
+#=====================================================
+
+# warning custom GateMaterials !
+/gate/geometry/setMaterialDatabase ../data/Material_General/GateMaterials.db
+
+/gate/geometry/setIonisationPotential Air 85.7 eV
+/gate/geometry/setIonisationPotential ICRU_LungInflated 75.2 eV
+#/gate/geometry/setIonisationPotential RS-Muscle 75 eV
+#/gate/geometry/setIonisationPotential RS-bone1 75 eV
+
+#/gate/geometry/setIonisationPotential Water 75 eV
+#/gate/geometry/setIonisationPotential G4_WATER 75 eV
+#/gate/geometry/setIonisationPotential ICRU_CompactBone 91.9 eV
+#/gate/geometry/setIonisationPotential Air_NIST 85.7 eV
+
+# Methode 125 Tissus Method_125Tissus_Caroline
+/gate/geometry/setMaterialDatabase ../data/Method_125Tissus_Caroline/Image125tissus_Corrected.db
+/control/execute ../data/Method_125Tissus_Caroline/Correction_I_Value.mac
+
+
+
+#=====================================================
+#World
+#=====================================================
+/gate/world/geometry/setXLength 1.0 m
+/gate/world/geometry/setYLength 1.0 m
+/gate/world/geometry/setZLength 4.0 m
+/gate/world/setMaterial G4_AIR
+
+/control/saveHistory SaveHistory.txt
+
+#=====================================================
+#System
+#=====================================================
+
+#/control/execute ../geometry/Ligne_ICO/v2T/Kapton_Collimateur_Tungsten_CorrectionCharbel.mac
+
+#/control/execute ../geometry/Ligne_ICO/v2T/AttachTOVolumeKapton_Collimateur_Tungsten_CorrectionCharbel.mac
+
+#/control/execute ../geometry/Ligne_ICO/v2T/Setup_Line.mac
+
+# Actor_Line_Light.mac
+
+
+#===========================================
+# CIBLE 
+#===========================================
+
+
+
+
+
+
+/gate/world/daughters/name InputImageOfProtocol
+/gate/world/daughters/insert box
+/gate/InputImageOfProtocol/setMaterial G4_WATER
+/gate/InputImageOfProtocol/geometry/setXLength 20 mm
+/gate/InputImageOfProtocol/geometry/setYLength 20 mm
+/gate/InputImageOfProtocol/geometry/setZLength 30 mm
+/gate/InputImageOfProtocol/vis/setColor yellow
+/gate/InputImageOfProtocol/vis/forceSolid
+#TRANSLATION à partir du centre du volume
+/gate/InputImageOfProtocol/placement/setTranslation 0. 0. 171 cm
+
+
+#================================================
+# -----------------------------------------------------
+# Systeme Detection Apres Ligne  
+# V1 Cube_After de PMMA
+#================================================
+
+
+# Cube_After
+#================================================
+
+/gate/world/daughters/name Cube_After
+/gate/world/daughters/insert box
+/gate/Cube_After/setMaterial G4_WATER
+/gate/Cube_After/geometry/setXLength 20 mm
+/gate/Cube_After/geometry/setYLength 20 mm
+/gate/Cube_After/geometry/setZLength 30 mm
+/gate/Cube_After/vis/setColor yellow
+/gate/Cube_After/vis/forceSolid
+#TRANSLATION à partir du centre du volume
+/gate/Cube_After/placement/setTranslation 0. 0. 180 cm
+
+
+#====================================
+#Physics GATE
+#====================================
+
+#/control/execute ../physics_list/GateV8_BIC.mac
+/control/execute ../physics_list/GateV8_BIC_HP.mac
+#/control/execute ../physics_list/GateV7.mac
+
+#/control/execute ../physics_list/BIC_HP.mac
+
+#====================================
+
+
+#cut world
+/gate/physics/Gamma/SetCutInRegion world 10 mm
+/gate/physics/Electron/SetCutInRegion world 10 mm
+/gate/physics/Proton/SetCutInRegion world 10 mm
+/gate/physics/Positron/SetCutInRegion world 10 mm
+
+/gate/physics/Gamma/SetCutInRegion Cube_After 0.1 mm
+/gate/physics/Electron/SetCutInRegion Cube_After 0.1 mm
+/gate/physics/Proton/SetCutInRegion Cube_After 0.1 mm
+/gate/physics/Positron/SetCutInRegion Cube_After 0.1 mm
+
+/gate/physics/displayCuts
+
+#steplimiter
+#/gate/physics/SetMaxStepSizeInRegion InputImageOfProtocol 0.1 mm
+#/gate/physics/SetMaxStepSizeInRegion cuve 0.1 mm
+
+
+/gate/physics/setEMin 0.1 keV
+/gate/physics/setEMax 10 GeV
+
+/gate/physics/setDEDXBinning 500
+/gate/physics/setLambdaBinning 500
+
+
+#====================================
+#Actor
+#====================================
+
+#/gate/output/allowNoOutput
+
+#DOSE ACTOR
+/gate/actor/addActor DoseActor dose
+/gate/actor/dose/save output/souris.hdr
+/gate/actor/dose/attachTo InputImageOfProtocol
+/gate/actor/dose/setResolution 160 103 172
+/gate/actor/dose/saveEveryNSeconds 60
+/gate/actor/dose/stepHitType random
+
+/gate/actor/dose/enableEdep true
+/gate/actor/dose/enableUncertaintyEdep true
+
+/gate/actor/dose/enableDose true
+/gate/actor/dose/enableUncertaintyDose true
+
+/gate/actor/dose/enableDoseToWater true
+/gate/actor/dose/enableUncertaintyDoseToWater true
+
+
+#DOSE ACTOR ROOT
+/gate/actor/addActor DoseActor dose_root
+/gate/actor/dose_root/save output/souris.root
+/gate/actor/dose_root/attachTo InputImageOfProtocol
+/gate/actor/dose_root/setResolution 1 1 172
+/gate/actor/dose_root/saveEveryNSeconds 60
+/gate/actor/dose_root/stepHitType random
+
+/gate/actor/dose_root/enableEdep false
+/gate/actor/dose_root/enableUncertaintyEdep false
+
+/gate/actor/dose_root/enableDose true
+/gate/actor/dose_root/enableUncertaintyDose true
+
+/gate/actor/dose_root/enableDoseToWater true
+/gate/actor/dose_root/enableUncertaintyDoseToWater true
+
+/gate/actor/dose_root/enableNumberOfHits true
+
+
+#DOSE ACTOR Neutron
+/gate/actor/addActor DoseActor dose_neutron
+/gate/actor/dose_neutron/save output/souris_neutron.root
+/gate/actor/dose_neutron/attachTo InputImageOfProtocol
+/gate/actor/dose_neutron/setResolution 1 1 172
+/gate/actor/dose_neutron/saveEveryNSeconds 60
+/gate/actor/dose_neutron/stepHitType random
+
+/gate/actor/dose_neutron/enableEdep false
+/gate/actor/dose_neutron/enableUncertaintyEdep false
+
+/gate/actor/dose_neutron/enableDose true
+/gate/actor/dose_neutron/enableUncertaintyDose true
+
+/gate/actor/dose_neutron/enableDoseToWater false
+/gate/actor/dose_neutron/enableUncertaintyDoseToWater false
+/gate/actor/dose_neutron/enableSquaredDoseToWater false
+
+/gate/actor/dose_neutron/addFilter                       particleFilter
+/gate/actor/dose_neutron/particleFilter/addParticle      neutron
+
+        
+
+        
+        
+        
+        
+#DOSE ACTOR
+
+
+
+
+
+
+
+#====================================================================
+#Phase space actor
+#/control/execute ../geometry/Ligne_ICO/v2T/SystemeDetectionApresSouris_Actor.mac
+#====================================================================
+
+/gate/actor/addActor PhaseSpaceActor               frite_Cube_After
+/gate/actor/frite_Cube_After/save                     output/frite_Cube_After_phasespaceactor.root
+/gate/actor/frite_Cube_After/attachTo                 Cube_After
+/gate/actor/frite_Cube_After/enableEkine              true
+/gate/actor/frite_Cube_After/enableXPosition          true
+/gate/actor/frite_Cube_After/enableYPosition          true
+/gate/actor/frite_Cube_After/enableZPosition          false
+/gate/actor/frite_Cube_After/enableXDirection         false
+/gate/actor/frite_Cube_After/enableYDirection         false
+/gate/actor/frite_Cube_After/enableZDirection         false
+/gate/actor/frite_Cube_After/enableProductionVolume   false
+/gate/actor/frite_Cube_After/enableProductionProcess  false
+/gate/actor/frite_Cube_After/enableParticleName       false
+/gate/actor/frite_Cube_After/enableWeight             false
+/gate/actor/frite_Cube_After/enablePrimaryEnergy      false
+/gate/actor/frite_Cube_After/addFilter                       particleFilter
+/gate/actor/frite_Cube_After/particleFilter/addParticle      proton
+
+/gate/actor/frite_Cube_After/enableCharge             false
+/gate/actor/frite_Cube_After/enableMass             false
+/gate/actor/frite_Cube_After/enableTOut             false
+/gate/actor/frite_Cube_After/enableTProd             false
+
+/gate/actor/frite_Cube_After/storeAllStep             false
+/gate/actor/frite_Cube_After/useVolumeFrame           false
+/gate/actor/frite_Cube_After/storeSecondaries         false
+
+
+#====================================================================
+#DOSE ACTOR All
+#====================================================================
+
+### hdr
+
+/gate/actor/addActor DoseActor dose_Cube_after
+/gate/actor/dose_Cube_after/save output/dose_Cube_after_All.hdr
+/gate/actor/dose_Cube_after/attachTo Cube_After
+
+/gate/actor/dose_Cube_after/setResolution 100 100 150
+/gate/actor/dose_Cube_after/saveEveryNSeconds 60
+/gate/actor/dose_Cube_after/stepHitType random
+
+/gate/actor/dose_Cube_after/enableEdep true
+/gate/actor/dose_Cube_after/enableUncertaintyEdep true
+
+/gate/actor/dose_Cube_after/enableDose true
+/gate/actor/dose_Cube_after/enableUncertaintyDose true
+
+/gate/actor/dose_Cube_after/enableDoseToWater true
+/gate/actor/dose_Cube_after/enableUncertaintyDoseToWater true
+#/gate/actor/dose_Cube_after/normaliseDoseToWater     true
+
+#/gate/actor/dose_Cube_after/normaliseDoseToMax     true
+/gate/actor/dose_Cube_after/normaliseDoseToIntegral   false
+
+/gate/actor/dose_Cube_after/enableNumberOfHits true
+
+### root
+
+/gate/actor/addActor DoseActor dose_Cube_after_root
+/gate/actor/dose_Cube_after_root/save output/dose_Cube_after_All.root
+/gate/actor/dose_Cube_after_root/attachTo Cube_After
+
+/gate/actor/dose_Cube_after_root/setResolution 1 1 150
+/gate/actor/dose_Cube_after_root/saveEveryNSeconds 60
+/gate/actor/dose_Cube_after_root/stepHitType random
+
+/gate/actor/dose_Cube_after_root/enableEdep true
+/gate/actor/dose_Cube_after_root/enableUncertaintyEdep true
+
+/gate/actor/dose_Cube_after_root/enableDose true
+/gate/actor/dose_Cube_after_root/enableUncertaintyDose true
+
+/gate/actor/dose_Cube_after_root/enableDoseToWater true
+/gate/actor/dose_Cube_after_root/enableUncertaintyDoseToWater true
+#/gate/actor/dose_Cube_after_root/normaliseDoseToWater     true
+
+#/gate/actor/dose_Cube_after_root/normaliseDoseToMax     true
+/gate/actor/dose_Cube_after_root/normaliseDoseToIntegral   false
+
+/gate/actor/dose_Cube_after_root/enableNumberOfHits true
+
+
+###########################################################################################
+
+
+# Stopping Power
+#/control/execute ../geometry/Stopping_Power.mac
+
+# Pemet de caracteriser la ligne
+#/control/execute ../geometry/SystemeDetectionApresLigne_Actor.mac
+
+# Enregistre les particules qui traverses la ligne
+# Pemet de retrouver les émméteurs beta+
+#/control/execute ../geometry/Ligne_ICO/v2T/BetaPlus_Actor.mac
+
+
+### Actor Line for test
+#/control/execute /scratch/9775670.1.interactive/All_Simulation/geometry/Ligne_ICO/v2T/Actor_Line_Light.mac
+
+#====================================================================
+#Phase space actor
+#/control/execute ../geometry/Ligne_ICO/v2T/SystemeDetectionApresSouris_Actor.mac
+#====================================================================
+
+/gate/actor/addActor PhaseSpaceActor              frite_Souris
+/gate/actor/frite_Souris/save                     output/frite_Souris.root
+/gate/actor/frite_Souris/attachTo                 InputImageOfProtocol
+/gate/actor/frite_Souris/enableEkine              true
+/gate/actor/frite_Souris/enableXPosition          true
+/gate/actor/frite_Souris/enableYPosition          true
+/gate/actor/frite_Souris/enableZPosition          false
+/gate/actor/frite_Souris/enableXDirection         false
+/gate/actor/frite_Souris/enableYDirection         false
+/gate/actor/frite_Souris/enableZDirection         false
+/gate/actor/frite_Souris/enableProductionVolume   false
+/gate/actor/frite_Souris/enableProductionProcess  false
+/gate/actor/frite_Souris/enableParticleName       false
+/gate/actor/frite_Souris/enableWeight             false
+/gate/actor/frite_Souris/enablePrimaryEnergy      false
+/gate/actor/frite_Souris/addFilter                       particleFilter
+/gate/actor/frite_Souris/particleFilter/addParticle      proton
+
+/gate/actor/frite_Souris/enableCharge             false
+/gate/actor/frite_Souris/enableMass             false
+/gate/actor/frite_Souris/enableTOut             false
+/gate/actor/frite_Souris/enableTProd             false
+
+/gate/actor/frite_Souris/storeAllStep             false
+/gate/actor/frite_Souris/useVolumeFrame           false
+/gate/actor/frite_Souris/storeSecondaries         false
+
+
+
+
+
+
+### Actor Line souris
+
+
+
+/gate/actor/addActor SimulationStatisticActor     stat
+/gate/actor/stat/save    output/stat.ascii
+
+
+#====================================
+#Initialization
+#====================================
+
+/gate/run/initialize
+
+
+
+#====================================
+#Source
+#====================================
+
+#type
+/gate/source/addSource pbeam gps
+/gate/source/pbeam/gps/particle proton
+
+
+#forme
+/gate/source/pbeam/gps/type Beam
+/gate/source/pbeam/gps/shape Circle
+
+/gate/source/pbeam/gps/pos/sigma_x 2 mm
+/gate/source/pbeam/gps/pos/sigma_y 3 mm
+
+#localisation
+/gate/source/pbeam/gps/centre 0 0 -0.01 mm
+/gate/source/pbeam/gps/direction 0 0 1
+
+#energie
+/gate/source/pbeam/gps/ene/mono 68 MeV
+/gate/source/pbeam/gps/ene/type Gauss
+/gate/source/pbeam/gps/ene/sigma 0 MeV
+
+#/gate/source/pbeam/gps/setTestFlag true
+
+
+
+#====================================
+#Initialization
+#====================================
+
+#/gate/run/initialize
+
+#graine 
+/gate/random/setEngineName MersenneTwister
+/gate/random/setEngineSeed auto
+
+#nb particule
+/gate/application/setTotalNumberOfPrimaries 1000
+/gate/application/start
+
+
